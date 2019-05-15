@@ -17,7 +17,7 @@ var icon_url = 'src/icons/{1}/{0}-{1}-{2}.svg';
 
 						'mousedown' : function() {
 							icon.attr('src', icon_url.format(values[0], values[1], 'click'));
-							window.location.replace('http://tubi_carrillo.github.io/src/' + icon.data('link'));
+							window.location.replace('http://tubi_carrillo.github.io/' + icon.data('link'));
 						}
 					});
 				});
