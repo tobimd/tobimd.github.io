@@ -21,10 +21,10 @@
 		<!-- Split -->
 		<div class="d-flex justify-content-between" style="margin-left:35rem; margin-right:35rem; margin-top:10rem;">
 			<div class="m-4">
-				<a class="white-link one-click" data-disabled="true" data-link="http://tubi-carrillo.github.io/views/minecraft/home.html"><h1>/COMMANDS</h1></a>
+				<button type="button" class="btn btn-link once" data-disabled="false"><h1>/COMMANDS</h1></button>
 			</div>
 			<div class="m-4">
-				<a class="white-link one-click" href="" data-disabled="false" data-link="http://tubi-carrillo.github.io/views/minecraft/home.html"><h1>INFO</h1></a>
+				<button type="button" class="btn btn-link once" disabled data-disabled="true"><h1>INFO</h1></button>
 			</div>
 		</div>
 
@@ -36,36 +36,15 @@
 		<script src="../../src/js/btn_icon.js"></script>
 		<script>
 			$(document).ready(function() {
-				$('.white-link.one-click').each(function() {
-					var element = $(this);
-					var isDisabled = element.data('disabled');
+				$('.btn.btn-link.once').on('click', function() {
+					$('.btn.btn-link.once').each(function() {
+						var button = $(this);
+						var isDisabled = button.data('disabled');
 
-					element.on({
-						'mouseenter' : function() {
-							if (isDisabled) {
-								element.removeAttr('href');
-							} else {
-								element.attr('href', element.data('link'));
-							}
-						},
-
-						'mousedown' : function() {
-							if (!isDisabled) {
-								console.log($('.white-link.one-click').data('disabled'));
-								//negateLinks();
-								$('.white-link.one-click').each(function() {
-									var element = $(this);
-									var isDisabled = element.data('disabled');
-
-									window.location.replace(element.attr('href'));
-
-									element.data('disabled', !isDisabled);
-								})
-								console.log($('.white-link.one-click').data('disabled'));
-							}
-						}
+						button.prop('disabled', !isDisabled);
+						button.data('disabled', !isDisabled);
 					});
-				})
+				});
 			});
 		</script>
 	</body>

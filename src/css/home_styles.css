@@ -6,13 +6,17 @@ body {
     font-family: 'Ubuntu Mono', monospace;
 }
 
-.white-link {
+.btn-link {
     color: white;
     text-decoration: none;
 }
 
-.white-link:hover {
+.btn-link:hover {
     color: #a5a5a5;
+    text-decoration: none;
+}
+
+.btn-link:focus {
     text-decoration: none;
 }
 
