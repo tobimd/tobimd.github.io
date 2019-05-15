@@ -52,7 +52,15 @@
 						'mousedown' : function() {
 							if (!isDisabled) {
 								console.log($('.white-link.one-click').data('disabled'));
-								negateLinks();
+								//negateLinks();
+								$('.white-link.one-click').each(function() {
+									var element = $(this);
+									var isDisabled = element.data('disabled');
+
+									window.location.replace(element.attr('href'));
+
+									element.data('disabled', !isDisabled);
+								})
 								console.log($('.white-link.one-click').data('disabled'));
 							}
 						}
