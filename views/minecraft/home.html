@@ -8,26 +8,26 @@
 		<!-- CSS (Bootstrap, ubuntu mono font[b, bi], index styles) -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:700,700i" rel="stylesheet">
-		<link rel="stylesheet" href="../../src/css/index_styles.css">
-
-		<style>
-			body {
-				color: white;
-				font-family: 'Ubuntu Mono', monospace;
-			}
-		</style>
+		<link rel="stylesheet" href="../../src/css/home_styles.css">
 	</head>
 	<body>
-		<div class="btn-icon m-3">
-			<img class="iicon icon-home" src="../../src/icons/home/icon-home-normal.svg" alt="normal.svg" height="80rem" data-link="index.html">
+		<!-- Home button -->
+		<div class="d-flex">
+			<div class="btn-icon m-3">
+					<img class="iicon icon-home" src="../../src/icons/home/icon-home-normal.svg" alt="normal.svg" height="80rem" data-link="index.html">
+			</div>
 		</div>
-		<br><br><br>
-		<ul>
-			<li class="btn-icon">
-				<img class="iicon icon-info" src="../../src/icons/info/icon-info-normal.svg" alt="normal.svg" height="120rem" data-link="views/minecraft/info.html">
-				<p>INFO</p>
-			</li>
-		</ul>
+
+		<!-- Split -->
+		<div class="d-flex justify-content-between" style="margin-left:35rem; margin-right:35rem; margin-top:10rem;">
+			<div class="m-4">
+				<a class="white-link" href="#"><h1>/COMMANDS</h1></a>
+			</div>
+			<div class="m-4">
+				<a class="white-link" href="#"><h1>INFO</h1></a>
+			</div>
+		</div>
+
 		<!-- Scripts (Bootstrap x3) -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
