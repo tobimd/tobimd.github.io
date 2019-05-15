@@ -1,7 +1,7 @@
 var icon_url = '../../src/icons/{0}/icon-{0}-{1}.svg';
 
 $(document).ready(function() {
-	$('li.btn-icon, .navbar.navbar-expand-lg.btn-icon').each(function() {
+	$('li.btn-icon, .btn-icon').each(function() {
 		var element = $(this);
 		var icon = $(this).find('.iicon');
 		var name = icon.attr('class').split(' ')[1].split("-")[1];

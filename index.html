@@ -69,7 +69,9 @@
 
 						'mousedown' : function() {
 							icon.attr('src', icon_url.format(name, 'click'));
-							window.location.replace('http://tubi-carrillo.github.io/' + icon.data('link'));
+							window.setTimeout(function(){
+								window.location.replace('http://tubi-carrillo.github.io/' + icon.data('link'));
+                 			}, 500);
 						}
 					});
 				});
