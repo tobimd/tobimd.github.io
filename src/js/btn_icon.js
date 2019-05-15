@@ -1,4 +1,4 @@
-var icon_url = '../../src/icons/{0}/icon-{0}-{1}.svg';
+var icon_url = '../src/icons/{0}/icon-{0}-{1}.svg';
 
 $(document).ready(function() {
 	$('li.btn-icon, .btn-icon').each(function() {

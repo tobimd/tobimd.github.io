@@ -6,6 +6,6 @@ String.prototype.format = function () {
 
 function iconError(icon, name) {
     icon.onerror = "";
-    icon.src = '../../src/icons/{0}/icon-{0}-normal.svg'.format(name);
+    icon.src = '../src/icons/{0}/icon-{0}-normal.svg'.format(name);
     return true;
 }
