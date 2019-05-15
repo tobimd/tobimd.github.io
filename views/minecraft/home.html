@@ -21,12 +21,90 @@
 		<!-- Split -->
 		<div class="d-flex justify-content-between" style="margin-left:35rem; margin-right:35rem; margin-top:10rem;">
 			<div class="m-4">
-				<button type="button" class="btn btn-link once" data-disabled="false"><h1>/COMMANDS</h1></button>
+				<button type="button" href="#CommandsCard" class="btn btn-link once" disabled data-disabled="true"><h1>COMMANDS</h1></button>
 			</div>
 			<div class="m-4">
-				<button type="button" class="btn btn-link once" disabled data-disabled="true"><h1>INFO</h1></button>
+				<button type="button" href="#InfoCard" class="btn btn-link once" data-disabled="false"><h1>INFO</h1></button>
 			</div>
 		</div>
+
+
+		<!-- Card -->
+		<div class="d-flex justify-content-center mx-5">
+
+			<!-- CommandsCard -->
+			<div class="collapse" id="CommandsCard" style="position: absolute; z-index: auto;">
+				<div class="card text-center">
+					<div class="card-header">
+						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+							<li class="nav-item">
+								<a class="nav-link active" id="pills-summon-tab" data-toggle="pill" href="#pills-summon" role="tab" aria-controls="pills-summon" aria-selected="true">Summon</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pills-give-tab" data-toggle="pill" href="#pills-give" role="tab" aria-controls="pills-give" aria-selected="false">Give</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pills-json-tab" data-toggle="pill" href="#pills-json" role="tab" aria-controls="pills-json" aria-selected="false">JSON</a>
+							</li>
+							<li class="nav-item">
+									<a class="nav-link" id="pills-banner-tab" data-toggle="pill" href="#pills-banner" role="tab" aria-controls="pills-banner" aria-selected="false">Banner</a>
+							</li>
+							<li class="nav-item">
+									<a class="nav-link" id="pills-fireworks-tab" data-toggle="pill" href="#pills-fireworks" role="tab" aria-controls="pills-fireworks" aria-selected="false">Fireworks</a>
+							</li>
+							<li class="nav-item">
+									<a class="nav-link" id="pills-onecommand-tab" data-toggle="pill" href="#pills-onecommand" role="tab" aria-controls="pills-onecommand" aria-selected="false">One Command</a>
+							</li>
+						</ul>
+					</div>
+					<div class="card-body">
+						<div class="tab-content" id="pills-tabContent">
+							<div class="tab-pane fade show active" id="pills-summon" role="tabpanel" aria-labelledby="pills-summon-tab">...</div>
+							<div class="tab-pane fade" id="pills-give" role="tabpanel" aria-labelledby="pills-give-tab">...</div>
+							<div class="tab-pane fade" id="pills-json" role="tabpanel" aria-labelledby="pills-json-tab">...</div>
+							<div class="tab-pane fade" id="pills-banner" role="tabpanel" aria-labelledby="pills-banner-tab">...</div>
+							<div class="tab-pane fade" id="pills-fireworks" role="tabpanel" aria-labelledby="pills-fireworks-tab">...</div>
+							<div class="tab-pane fade" id="pills-onecommand" role="tabpanel" aria-labelledby="pills-onecommand-tab">...</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- InfoCard -->
+			<div class="collapse in" id="InfoCard" style="position: absolute; z-index: 2;">
+					<div class="card text-center">
+							<div class="card-header">
+								<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+									<li class="nav-item">
+										<a class="nav-link active" id="pills-particles-tab" data-toggle="pill" href="#pills-particles" role="tab" aria-controls="pills-particles" aria-selected="true">Particles</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" id="pills-sounds-tab" data-toggle="pill" href="#pills-sounds" role="tab" aria-controls="pills-sounds" aria-selected="false">Sounds</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" id="pills-colorformat-tab" data-toggle="pill" href="#pills-colorformat" role="tab" aria-controls="pills-colorformat" aria-selected="false">Color Format</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" id="pills-heads-tab" data-toggle="pill" href="#pills-heads" role="tab" aria-controls="pills-heads" aria-selected="false">Heads</a>
+									</li>
+									<li class="nav-item">
+											<a class="nav-link" id="pills-commands-tab" data-toggle="pill" href="#pills-commands" role="tab" aria-controls="pills-commands" aria-selected="false">Commands</a>
+									</li>
+								</ul>
+							</div>
+							<div class="card-body">
+								<div class="tab-content" id="pills-tabContent">
+									<div class="tab-pane fade show active" id="pills-particles" role="tabpanel" aria-labelledby="pills-particles-tab">...</div>
+									<div class="tab-pane fade" id="pills-sounds" role="tabpanel" aria-labelledby="pills-sounds-tab">...</div>
+									<div class="tab-pane fade" id="pills-colorformat" role="tabpanel" aria-labelledby="pills-colorformat-tab">...</div>
+									<div class="tab-pane fade" id="pills-heads" role="tabpanel" aria-labelledby="pills-heads-tab">...</div>
+									<div class="tab-pane fade" id="pills-commands" role="tabpanel" aria-labelledby="pills-commands-tab">...</div>
+								</div>
+							</div>
+						</div>
+			</div>
+		</div>
+			
 
 		<!-- Scripts (Bootstrap x3) -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -34,8 +112,10 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		<script src="../../src/js/functions.js"></script>
 		<script src="../../src/js/btn_icon.js"></script>
+		<script src="../../src/js/bootstrap.js"></script>
 		<script>
 			$(document).ready(function() {
+				$('#CommandsCard').collapse('show');
 				$('.btn.btn-link.once').on('click', function() {
 					$('.btn.btn-link.once').each(function() {
 						var button = $(this);
@@ -43,6 +123,7 @@
 
 						button.prop('disabled', !isDisabled);
 						button.data('disabled', !isDisabled);
+						$(button.attr('href')).collapse('toggle');
 					});
 				});
 			});
