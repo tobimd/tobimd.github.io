@@ -38,13 +38,13 @@
 					<div class="card-header">
 						<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 							<li class="nav-item">
-								<a class="nav-link active" id="pills-summon-tab" data-toggle="pill" href="#pills-summon" role="tab" aria-controls="pills-summon" aria-selected="true">Summon</a>
+								<a class="nav-link active" id="pills-json-tab" data-toggle="pill" href="#pills-json" role="tab" aria-controls="pills-json" aria-selected="false">JSON</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="pills-summon-tab" data-toggle="pill" href="#pills-summon" role="tab" aria-controls="pills-summon" aria-selected="true">Summon</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" id="pills-give-tab" data-toggle="pill" href="#pills-give" role="tab" aria-controls="pills-give" aria-selected="false">Give</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" id="pills-json-tab" data-toggle="pill" href="#pills-json" role="tab" aria-controls="pills-json" aria-selected="false">JSON</a>
 							</li>
 							<li class="nav-item">
 									<a class="nav-link" id="pills-banner-tab" data-toggle="pill" href="#pills-banner" role="tab" aria-controls="pills-banner" aria-selected="false">Banner</a>
@@ -59,27 +59,53 @@
 					</div>
 					<div class="card-body">
 						<div class="tab-content" id="pills-tabContent">
-							<div class="tab-pane fade show active" id="pills-summon" role="tabpanel" aria-labelledby="pills-summon-tab">
+							<div class="tab-pane fade show active" id="pills-json" role="tabpanel" aria-labelledby="pills-json-tab">
+								<div class="card-title">[ JSON WRITER ]</div><hr><br>
+								<div class="card-text">
+									<!-- GENERATOR -->
+									
+								</div>
+							</div>
+							<div class="tab-pane fade" id="pills-summon" role="tabpanel" aria-labelledby="pills-summon-tab">
 								<div class="card-title">[ Summon Command ]</div><hr><br>
 								<div class="card-text">
 									<!-- STRUCTURE -->
-									<span class="cmd">summon</span> 
-									<f-cmd type="val" class="cmd-r">entity_name</f-cmd> 
-									<f-cmd type="opt" class="cmd-o">x</f-cmd> 
-									<f-cmd type="opt" class="cmd-o">y</f-cmd> 
-									<f-cmd type="opt" class="cmd-o">z</f-cmd> 
-									<f-cmd type="v-o" class="cmd-o">dataTag</f-cmd> <br>
+									/<span class="cmd">summon</span> 
+									<f-cmd type="val">entity_name</f-cmd> 
+									<f-cmd type="opt">x</f-cmd> 
+									<f-cmd type="opt">y</f-cmd> 
+									<f-cmd type="opt">z</f-cmd> 
+									<f-cmd type="v-o">dataTag</f-cmd> <br>
 									<small>(structure)</small><br><br><hr><br><br>
 
 									<!-- GENERATOR -->
-
+									
 								</div>
 							</div>
-							<div class="tab-pane fade" id="pills-give" role="tabpanel" aria-labelledby="pills-give-tab">...</div>
-							<div class="tab-pane fade" id="pills-json" role="tabpanel" aria-labelledby="pills-json-tab">...</div>
-							<div class="tab-pane fade" id="pills-banner" role="tabpanel" aria-labelledby="pills-banner-tab">...</div>
-							<div class="tab-pane fade" id="pills-fireworks" role="tabpanel" aria-labelledby="pills-fireworks-tab">...</div>
-							<div class="tab-pane fade" id="pills-onecommand" role="tabpanel" aria-labelledby="pills-onecommand-tab">...</div>
+							<div class="tab-pane fade" id="pills-give" role="tabpanel" aria-labelledby="pills-give-tab">
+								<div class="card-title">[ Give Command ]</div><hr><br>
+								<div class="card-text">
+									<!-- STRUCTURE -->
+									/<span class="cmd">give</span> 
+									<f-cmd type="val">player</f-cmd>
+									<f-cmd type="v-o">selectors</f-cmd> 
+									<f-cmd type="val">item</f-cmd><f-cmd type="v-o">NBT</f-cmd> 
+									<f-cmd type="v-o">count</f-cmd> <br>
+									<small>(structure)</small><br><br><hr><br><br>
+
+									<!-- GENERATOR -->
+									
+								</div>
+							</div>
+							<div class="tab-pane fade" id="pills-banner" role="tabpanel" aria-labelledby="pills-banner-tab">
+								<div class="card-title">[ Banner Creator ]</div><hr><br>
+							</div>
+							<div class="tab-pane fade" id="pills-fireworks" role="tabpanel" aria-labelledby="pills-fireworks-tab">
+								<div class="card-title">[ Firework Creator ]</div><hr><br>
+							</div>
+							<div class="tab-pane fade" id="pills-onecommand" role="tabpanel" aria-labelledby="pills-onecommand-tab">
+								<div class="card-title">[ One Command Generator ]</div><hr><br>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -91,7 +117,7 @@
 							<div class="card-header">
 								<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 									<li class="nav-item">
-										<a class="nav-link active" id="pills-reference-tab" data-toggle="pill" href="#pills-reference" role="tab" aria-controls="pills-reference" aria-selected="true">Reference</a>
+										<a class="nav-link active" id="pills-guide-tab" data-toggle="pill" href="#pills-guide" role="tab" aria-controls="pills-guide" aria-selected="true">Guide</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" id="pills-particles-tab" data-toggle="pill" href="#pills-particles" role="tab" aria-controls="pills-particles" aria-selected="true">Particles</a>
@@ -112,12 +138,24 @@
 							</div>
 							<div class="card-body">
 								<div class="tab-content" id="pills-tabContent">
-									<div class="tab-pane fade show active" id="pills-reference" role="tabpanel" aria-labelledby="pills-reference-tab">...</div>
-									<div class="tab-pane fade" id="pills-particles" role="tabpanel" aria-labelledby="pills-particles-tab">...</div>
-									<div class="tab-pane fade" id="pills-sounds" role="tabpanel" aria-labelledby="pills-sounds-tab">...</div>
-									<div class="tab-pane fade" id="pills-colorformat" role="tabpanel" aria-labelledby="pills-colorformat-tab">...</div>
-									<div class="tab-pane fade" id="pills-heads" role="tabpanel" aria-labelledby="pills-heads-tab">...</div>
-									<div class="tab-pane fade" id="pills-commands" role="tabpanel" aria-labelledby="pills-commands-tab">...</div>
+									<div class="tab-pane fade show active" id="pills-guide" role="tabpanel" aria-labelledby="pills-guide-tab">
+										<div class="card-title">[ Guide and Symbology ]</div><hr><br>
+									</div>
+									<div class="tab-pane fade" id="pills-particles" role="tabpanel" aria-labelledby="pills-particles-tab">
+										<div class="card-title">[ Particles Reference ]</div><hr><br>
+									</div>
+									<div class="tab-pane fade" id="pills-sounds" role="tabpanel" aria-labelledby="pills-sounds-tab">
+										<div class="card-title">[ Sounds Reference ]</div><hr><br>
+									</div>
+									<div class="tab-pane fade" id="pills-colorformat" role="tabpanel" aria-labelledby="pills-colorformat-tab">
+										<div class="card-title">[ Color Formatting Reference ]</div><hr><br>
+									</div>
+									<div class="tab-pane fade" id="pills-heads" role="tabpanel" aria-labelledby="pills-heads-tab">
+										<div class="card-title">[ Heads List ]</div><hr><br>
+									</div>
+									<div class="tab-pane fade" id="pills-commands" role="tabpanel" aria-labelledby="pills-commands-tab">
+									<div class="card-title">[ Commands List ]</div><hr><br>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -164,18 +202,19 @@
 
 				$('f-cmd').each(function() {
 					var element = $(this);
-					var open = '';
-					var close = '';
 
-					if (element.attr('type') == 'opt') {
-						open = '['; close = ']';
-					} else if (element.attr('type') == 'val') {
-						open = '&lt;'; close = '&gt;';
+					// defaults
+					var open = '[';
+					var close = ']';
+					var elementClass = 'cmd-o';
+
+					if (element.attr('type') == 'val') {
+						open = '&lt;'; close = '&gt;'; elementClass = 'cmd-r';
 					} else if (element.attr('type') == 'v-o') {
 						open = '[&lt;'; close = '&gt;]';
 					}
 
-					element.replaceWith('{0}<span class="{2}">{3}</span>{1}'.format(open, close, element.attr('class'), element.text()));
+					element.replaceWith('{0}<span class="{2}">{3}</span>{1}'.format(open, close, elementClass, element.text()));
 				});
 			});
 		</script>
