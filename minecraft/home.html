@@ -7,7 +7,7 @@
 
 		<!-- CSS (Bootstrap, ubuntu mono font[b, bi], index styles) -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:700,700i" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i" rel="stylesheet">
 		<link rel="stylesheet" href="../src/css/home_styles.css">
 	</head>
 	<body>
@@ -21,10 +21,10 @@
 		<!-- Split -->
 		<div class="d-flex justify-content-between" style="margin-left:35rem; margin-right:35rem; margin-top:10rem;">
 			<div class="m-4">
-				<button type="button" href="#CommandsCard" class="btn btn-link once" disabled data-disabled="true"><h1>COMMANDS</h1></button>
+				<button type="button" href="#CommandsCard" class="btn btn-link once" disabled data-disabled="true"><h1 style="font-weight: 700;">COMMANDS</h1></button>
 			</div>
 			<div class="m-4">
-				<button type="button" href="#InfoCard" class="btn btn-link once" data-disabled="false"><h1>INFO</h1></button>
+				<button type="button" href="#InfoCard" class="btn btn-link once" data-disabled="false"><h1 style="font-weight: 700;">INFO</h1></button>
 			</div>
 		</div>
 
@@ -59,7 +59,22 @@
 					</div>
 					<div class="card-body">
 						<div class="tab-content" id="pills-tabContent">
-							<div class="tab-pane fade show active" id="pills-summon" role="tabpanel" aria-labelledby="pills-summon-tab">...</div>
+							<div class="tab-pane fade show active" id="pills-summon" role="tabpanel" aria-labelledby="pills-summon-tab">
+								<div class="card-title">[ Summon Command ]</div><hr><br>
+								<div class="card-text">
+									<!-- STRUCTURE -->
+									<span class="cmd">summon</span> 
+									<f-cmd type="val" class="cmd-r">entity_name</f-cmd> 
+									<f-cmd type="opt" class="cmd-o">x</f-cmd> 
+									<f-cmd type="opt" class="cmd-o">y</f-cmd> 
+									<f-cmd type="opt" class="cmd-o">z</f-cmd> 
+									<f-cmd type="v-o" class="cmd-o">dataTag</f-cmd> <br>
+									<small>(structure)</small><br><br><hr><br><br>
+
+									<!-- GENERATOR -->
+
+								</div>
+							</div>
 							<div class="tab-pane fade" id="pills-give" role="tabpanel" aria-labelledby="pills-give-tab">...</div>
 							<div class="tab-pane fade" id="pills-json" role="tabpanel" aria-labelledby="pills-json-tab">...</div>
 							<div class="tab-pane fade" id="pills-banner" role="tabpanel" aria-labelledby="pills-banner-tab">...</div>
@@ -76,7 +91,10 @@
 							<div class="card-header">
 								<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 									<li class="nav-item">
-										<a class="nav-link active" id="pills-particles-tab" data-toggle="pill" href="#pills-particles" role="tab" aria-controls="pills-particles" aria-selected="true">Particles</a>
+										<a class="nav-link active" id="pills-reference-tab" data-toggle="pill" href="#pills-reference" role="tab" aria-controls="pills-reference" aria-selected="true">Reference</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" id="pills-particles-tab" data-toggle="pill" href="#pills-particles" role="tab" aria-controls="pills-particles" aria-selected="true">Particles</a>
 									</li>
 									<li class="nav-item">
 										<a class="nav-link" id="pills-sounds-tab" data-toggle="pill" href="#pills-sounds" role="tab" aria-controls="pills-sounds" aria-selected="false">Sounds</a>
@@ -94,7 +112,8 @@
 							</div>
 							<div class="card-body">
 								<div class="tab-content" id="pills-tabContent">
-									<div class="tab-pane fade show active" id="pills-particles" role="tabpanel" aria-labelledby="pills-particles-tab">...</div>
+									<div class="tab-pane fade show active" id="pills-reference" role="tabpanel" aria-labelledby="pills-reference-tab">...</div>
+									<div class="tab-pane fade" id="pills-particles" role="tabpanel" aria-labelledby="pills-particles-tab">...</div>
 									<div class="tab-pane fade" id="pills-sounds" role="tabpanel" aria-labelledby="pills-sounds-tab">...</div>
 									<div class="tab-pane fade" id="pills-colorformat" role="tabpanel" aria-labelledby="pills-colorformat-tab">...</div>
 									<div class="tab-pane fade" id="pills-heads" role="tabpanel" aria-labelledby="pills-heads-tab">...</div>
@@ -114,8 +133,24 @@
 		<script src="../src/js/btn_icon.js"></script>
 		<script src="../src/js/bootstrap.js"></script>
 		<script>
+			window.customElements.define('f-cmd', class extends HTMLElement {
+				get type() {
+					return this.hasAttribute('type');
+				}
+
+				set type(val) {
+					// Reflect the value of the open property as an HTML attribute.
+					if (val) {
+						this.setAttribute('type', '');
+					} else {
+						this.removeAttribute('type');
+					}
+				}
+			});
+
 			$(document).ready(function() {
 				$('#CommandsCard').collapse('show');
+
 				$('.btn.btn-link.once').on('click', function() {
 					$('.btn.btn-link.once').each(function() {
 						var button = $(this);
@@ -125,6 +160,22 @@
 						button.data('disabled', !isDisabled);
 						$(button.attr('href')).collapse('toggle');
 					});
+				});
+
+				$('f-cmd').each(function() {
+					var element = $(this);
+					var open = '';
+					var close = '';
+
+					if (element.attr('type') == 'opt') {
+						open = '['; close = ']';
+					} else if (element.attr('type') == 'val') {
+						open = '&lt;'; close = '&gt;';
+					} else if (element.attr('type') == 'v-o') {
+						open = '[&lt;'; close = '&gt;]';
+					}
+
+					element.replaceWith('{0}<span class="{2}">{3}</span>{1}'.format(open, close, element.attr('class'), element.text()));
 				});
 			});
 		</script>

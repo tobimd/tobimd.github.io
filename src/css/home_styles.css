@@ -33,3 +33,22 @@ ul li {
     margin-left: 1.25rem;
     margin-right: 1.25rem;
 }
+
+.card-title{
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.cmd-o {
+    color: #961515;
+}
+
+.cmd-r {
+    color: #2d5972;
+    font-style: italic;
+}
+
+.cmd {
+    color:#3b7a46;
+    font-weight: 700;
+}
