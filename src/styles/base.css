@@ -1,0 +1,13 @@
+@font-face {
+    font-family: Pixel;
+    src: url('../fonts/bpdots.squares-bold.otf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #383838;
+}
+pixel-btn {
+
+}
