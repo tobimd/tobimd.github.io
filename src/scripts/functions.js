@@ -1,3 +1,6 @@
+var baseDir = 'file:///D:/Documents/Github/tubi-carrillo.github.io/';
+var buttonDir = baseDir + 'src/buttons/';
+
 /**
  * Replaces parts of the string with "{<number>}" where <number> is the order of the element to be replaced (must be greater or equal than 0) 
  */
@@ -92,92 +95,53 @@ window.customElements.define('pixel-btn', class extends HTMLElement {
         return this.getAttribute('name');
     }
 
-    set name(value) {
-        if (value) {
-            this.setAttribute('name', value);
-        } else {
-            this.removeAttribute('name');
-        }
-    }
-
     get disabled() {
         return this.hasAttribute('disabled');
     }
 
-    set disabled(value) {
-        if (value) {
-            this.type = 'disabled';
-            this.setAttribute('disabled', '');
-        } else {
-            this.removeAttribute('disabled');
-        }
-    }
-
-    get src() {
-        if (this.hasAttribute('src'))
-            return this.getAttribute('src');
-            this.hasAttribute('src')
-    }
-
-    set src(value) {
-        if (value) {
-            this.style.backgroundImage = 'url("https://tubi-carrillo.github.io/src/buttons/{0}/{0}-{1}.svg")'.format(this.name, value);
-            this.setAttribute('src', value);
-        } else {
-            this.removeAttribute('src');
-        }
-    }
-
     get type() {
-        return this.hasAttribute('type');
+        return this.getAttribute('type');
     }
 
-    set type(value) {
-        if (this.disabled)
-            return;
+    get click() {
+        return this.getAttribute('click');
+    }
 
-        if (value) {
-            this.setAttribute('type', value);
+    get rclick() {
+        return this.getAttribute('rclick');
+    }
 
-            switch(value) {
-                case 'mouseenter':
-                    this.src = 'hover';
-                    break;
-                
-                case 'mousedown':
-                    this.src = 'click';
-                    break;
+    has(name) {
+        return this.hasAttribute(name);
+    }
+    
+    load() {
+        // class
+        this.img.setAttribute('class', 'pxicon {0}'.format(this.name));
 
-                case 'mouseleave':
-                    this.src = 'default';
-                    break;
-                
-                default:
-                    this.src = 'default';
-            }
-        } else {
-            this.removeAttribute('type');
+        // type
+        if (this.has('type')) 
+            this.img.setAttribute('type', this.type);
+        else
+            this.img.setAttribute('type', 'default');
+
+        // src
+            this.img.setAttribute('src', buttonDir + '{0}/{0}-{1}.svg'.format(this.name, this.img.getAttribute('type')));
+
+        // disabled
+        if (this.disabled) {
+            this.img.setAttribute('disabled', '');
+            this.img.setAttribute('type', 'disabled');
         }
-    }
 
+
+    }
     constructor () {
         super(); 
         
-        this.name = this.getAttribute('name');
-        this.disabled = false;
-        this.type = 'default';
-        this.src = 'default';
-        this.name;
-
-        
-        this.addEventListener('mouseenter', function(event) { this.type = 'mouseenter'; });
-
-        this.addEventListener('mouseleave', function(event) { this.type = 'mouseleave'; });
-
-        this.addEventListener('mousedown', function(event) { this.type = 'mousedown'; });
-
-        this.addEventListener('mouseup', function(event) {
-            //
-        });
+        // image element
+        this.img = document.createElement('img');
+        this.load();
+        this.replaceWith(this.img);
     }
 });
