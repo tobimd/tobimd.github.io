@@ -1,4 +1,4 @@
-var baseDir = 'file:///D:/Documents/Github/tubi-carrillo.github.io/';
+var baseDir = 'https://tubi-carrillo.github.io/';
 var buttonDir = baseDir + 'src/buttons/';
 
 /**
