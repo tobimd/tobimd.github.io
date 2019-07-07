@@ -1,4 +1,5 @@
-var baseDir = 'https://tubi-carrillo.github.io/';
+var startDir = 'file:///D:/Documents/Github/' // 'https://';
+var baseDir = startDir + 'tubi-carrillo.github.io/';
 var buttonDir = baseDir + 'src/buttons/';
 
 /**

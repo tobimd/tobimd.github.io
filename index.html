@@ -32,7 +32,7 @@
 		</style>
 	</head>
 	<body>
-		<!-- pixel-btn <name=""> [lclick=""] [rclick=""] [block-(lclick | rclick)] [disabled] -->
+		<!-- pixel-btn <name=""> [lclick=""] [rclick=""] [block-(lclick | rclick)] [disabled]>
 		
 		<div class="d-flex justify-content-center mx-5">
 			<pixel-btn name="home tab example" block-rclick></pixel-btn>
@@ -41,7 +41,9 @@
 			<pixel-btn name="minecraft tab example" block-rclick></pixel-btn>
 			<pixel-btn name="gmod tab example" block-rclick></pixel-btn>
 			<pixel-btn name="mario&luigi tab example" block-rclick></pixel-btn>
-		</div>
+		</div -->
+
+		<a role="button" class="btn btn-primary" href="index.html"><img src="concept-art/test_icon.svg"></a>
 
 		<!-- SCRIPTS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -49,10 +51,44 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="src/scripts/functions.js"></script>
         <script>
-        $(document).ready(function() {
-			$('.pxicon').each(function() {
+			/*var cursorX;
+			var cursorY;
+			var sec = 50;
+
+			document.onmousemove = function(e) {
+				cursorX = e.pageX;
+				cursorY = e.pageY;
+			}
+
+			setInterval(checkCursor, sec * 1000);
+
+			function checkCursor(){
+				console.info("Cursor at: " + cursorX + ", " + cursorY);
+			}*/
+
+			function save(filename, data) {
+				var blob = new Blob([data], {type: 'text/csv'});
+
+				if (window.navigator.msSaveOrOpenBlob) {
+					window.navigator.msSaveBlob(blob, filename);
+					
+				} else {
+					var elem = window.document.createElement('a');
+					elem.href = window.URL.createObjectURL(blob);
+					elem.download = filename;        
+					document.body.appendChild(elem);
+					elem.click();        
+					document.body.removeChild(elem);
+					URL.revokeObjectURL;
+				}
+			}
+
+			$(document).ready(function() {
+				save('textfile.txt', 'this is a text file.');
+
+				$('.pxicon').each(function() {
+				});
 			});
-        });
         </script>
 	</body>
 </html>
