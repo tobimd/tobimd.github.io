@@ -11,27 +11,14 @@
         <link rel="stylesheet" href="src/styles/base.css">
 		<link rel="stylesheet" href="src/styles/index.css">
 		<style>
-			img.pxicon {
-				cursor: pointer;
-			}
-
-			img.pxicon.tab {
-				height: 250px;
-				width: 250px;
-			}
-
-			img.pxicon.sub-tab {
-				height: 120px;
-				width: 120px;
-			}
-
-			img.pxicon.home {
-				height: 60px;
-				width: 60px;
+			.btn {
+				border-radius: 100%;
+				padding: 2rem;
 			}
 		</style>
 	</head>
 	<body>
+		<!-- px-icon name="" -->
 		<!-- pixel-btn <name=""> [lclick=""] [rclick=""] [block-(lclick | rclick)] [disabled]>
 		
 		<div class="d-flex justify-content-center mx-5">
@@ -43,7 +30,23 @@
 			<pixel-btn name="mario&luigi tab example" block-rclick></pixel-btn>
 		</div -->
 
-		<a role="button" class="btn btn-primary" href="index.html"><img src="concept-art/test_icon.svg"></a>
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/missing/regular-sm.svg"></a>
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/missing/regular-nm.svg"></a>
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/missing/regular-lg.svg"></a>
+
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/missing/filled-sm.svg"></a>
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/missing/filled-nm.svg"></a>
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/missing/filled-lg.svg"></a>
+
+		<br>
+
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/data/regular-sm.svg"></a>
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/data/regular-nm.svg"></a>
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/data/regular-lg.svg"></a>
+
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/data/filled-sm.svg"></a>
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/data/filled-nm.svg"></a>
+		<a role="button" class="btn btn-light" href="index.html"><img src="src/icons/data/filled-lg.svg"></a>
 
 		<!-- SCRIPTS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -66,26 +69,7 @@
 				console.info("Cursor at: " + cursorX + ", " + cursorY);
 			}*/
 
-			function save(filename, data) {
-				var blob = new Blob([data], {type: 'text/csv'});
-
-				if (window.navigator.msSaveOrOpenBlob) {
-					window.navigator.msSaveBlob(blob, filename);
-					
-				} else {
-					var elem = window.document.createElement('a');
-					elem.href = window.URL.createObjectURL(blob);
-					elem.download = filename;        
-					document.body.appendChild(elem);
-					elem.click();        
-					document.body.removeChild(elem);
-					URL.revokeObjectURL;
-				}
-			}
-
 			$(document).ready(function() {
-				save('textfile.txt', 'this is a text file.');
-
 				$('.pxicon').each(function() {
 				});
 			});

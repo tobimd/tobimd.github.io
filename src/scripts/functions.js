@@ -27,6 +27,43 @@ function random(a, b) {
     return Math.floor(Math.random() * (b - a)) + a;   // return random [a..b).
 }
 
+/**
+ * Generates a download file event in the browser
+ * @param {string} fileName The name of the file including it's extention.
+ * @param {string} fileData The content for that file.
+ */
+function saveFile(fileName, fileData) {
+    var blob = new Blob([fileData], {type: 'text/csv'});
+
+    if (window.navigator.msSaveOrOpenBlob) {
+        window.navigator.msSaveBlob(blob, fileName);
+
+    } else {
+        var elem = window.document.createElement('a');
+        elem.href = window.URL.createObjectURL(blob);
+        elem.download = fileName;        
+        document.body.appendChild(elem);
+        elem.click();        
+        document.body.removeChild(elem);
+        URL.revokeObjectURL;
+    }
+}
+
+/**
+ * Generates a download file event for each file object, in order.
+ * @param {...object} fileObjects These have to be with the file name first and then the data.
+ */
+function saveFiles() {
+    var args = arguments;
+
+    for (var i = 0; i < args.length; i++)
+        saveFile(args[i][0], args[i][1]);
+}
+
+function isLeftClick(event) { return event.which == 1; }
+
+function isRightClick(event) { return event.which == 3; }
+
 $.fn.extend({
 
     /**
@@ -198,194 +235,4 @@ $.fn.extend({
             return this.data(args[0]) == args[1]; // return the boolean of that comparison.
         }
     },
-
-    /**
-     * Returns if the element is a button.
-     * @returns Returns true if it is a button, false otherwise.
-     */
-    isButton : function() {
-        return this.classAtIndex(0) == 'pxicon';
-    },
-
-    /**
-     * Changes the src attribute for buttons.
-     * @param {string} [src] The new src for that element, 'default' is used if this parameter is 
-     * empty if it is a button.
-     * @returns {boolean | undefined} If the element has the src attribute, then returns true
-     * if the value has been successfully changed, false if not and undefined if it doesn't have
-     * that attribute.
-     */
-    src : function() {
-        var args = arguments;
-
-        // returns false if no arguments are given and if it's not a button.
-        if (args.length == 0) {
-            if (this.isButton())
-                return this.src('default');
-            return false;
-
-        } else if (args.length == 1) {
-            if (this.attr('src') == undefined) // if there is no 'src' attribute, then 
-                return undefined;              // return undefined.
-
-            var old = this.attr('src');        // the old src.
-
-            // if it is a button, change the type only.
-            if (this.isButton()) {
-                this.attr('src', buttonDir + '{0}/{0}-'.format(this.classAtIndex(1)) + args[0] + '.svg');
-                this.data('type', args[1]);    // also change the data-type attribute
-
-            // if it is *not* a button, change all the src string.
-            } else {
-                this.attr('src', args[0]);
-            }
-
-            if (old == this.attr('src'))
-                return false;
-
-            return true;
-
-        } 
-    },
-
-    /**
-     * Toggles the button being disabled.
-     * @param {boolean} [visible] If true, makes the change visible by also changing the src (default is true).
-     * @returns {boolean} Returns the value of it's disabled state after the toggle.
-     */
-    toggleDisabled : function() {
-
-        // button-only functionallity
-        if (this.isButton()) {
-            var visible = (arguments[0] == undefined) ? true : arguments[0];
-
-            if (this.data('disabled') == undefined) { // if button is not disabled, then
-                this.data('disabled', '');            // add data-disabled=''.
-
-                if (visible)
-                    this.src('disabled');
-                
-                return true;
-
-            } else {                                  // if button is disabled, then
-                this.removeData('disabled');          // remove the data from data-disabled
-                this.removeAttr('data-disabled');     // and remove the attribute 'data-disabled'
-
-                if (visible)
-                    this.src();
-
-                return false;
-            }
-        }
-    },
-});
-
-
-window.customElements.define('pixel-btn', class extends HTMLElement {
-    get name() { return this.getAttribute('name'); }
-
-    get disabled() { return this.hasAttribute('disabled'); }
-
-    get type() { return this.getAttribute('type'); }
-
-    get lclick() { return this.getAttribute('lclick'); }
-
-    get rclick() { return this.getAttribute('rclick'); }
-
-    get blockLeftClick() { return this.hasAttribute('block-lclick'); }
-
-    get blockRightClick() { return this.hasAttribute('block-rclick'); }
-
-    has(name) { return this.hasAttribute(name); }
-    
-    load() {
-        // class
-        this.img.setAttribute('class', 'pxicon {0}'.format(this.name));
-
-        // type
-        if (this.has('type')) 
-            this.img.setAttribute('data-type', this.type);
-        else
-            this.img.setAttribute('data-type', 'default');
-
-        // disabled
-        if (this.disabled) {
-            this.img.setAttribute('data-disabled', '');
-            this.img.setAttribute('data-type', 'disabled');
-        }
-
-        // src
-        this.img.setAttribute('src', buttonDir + '{0}/{0}-{1}.svg'.format(this.name.split(' ')[0], this.img.getAttribute('data-type')));
-
-        // block clicks
-        if (this.blockLeftClick)
-            this.img.setAttribute('data-block', 'left');
-        else if (this.blockRightClick)
-            this.img.setAttribute('data-block', 'right');
-
-        // lclick
-        if (this.has('lclick'))
-            this.img.setAttribute('data-lclick', this.lclick);
-
-        // rclick
-        if (this.has('rclick'))
-            this.img.setAttribute('data-rclick', this.rclick);
-    }
-
-    constructor () {
-        super(); 
-        
-        this.img = document.createElement('img'); // image element
-        this.load();                              // loading info onto image tag
-        this.replaceWith(this.img);               // replacing "pixel-btn" with "img"
-    }
-});
-
-function isLeftClick(event) { return event.which == 1; }
-
-function isRightClick(event) { return event.which == 3; }
-
-$(document).ready(function() {
-    $('img.pxicon').each(function() {
-        var btn = $(this);
-        btn.bind("contextmenu", function(e) { e.preventDefault(); });
-
-        btn.on({
-            'mouseenter' : function() {
-                if (!btn.cmpData('disabled'))
-                    btn.src('hover');
-            },
-
-            'mouseleave' : function() {
-                if (!btn.cmpData('disabled'))
-                    btn.src();
-            },
-
-            'mousedown' : function(event) {
-                if (!btn.cmpData('disabled')) {
-                    if ((!btn.cmpData('block', 'left') && isLeftClick(event)) || (!btn.cmpData('block', 'right') && isRightClick(event)))
-                        btn.src('click');
-                }
-            },
-            
-            'mouseup' : function(event) {
-                if (!btn.cmpData('disabled')) {
-                    btn.src('hover');
-                    
-                    window.setTimeout(function() {  
-                        if (btn.cmpData('lclick') && isLeftClick(event))
-                            window.location.assign(baseDir + btn.data('lclick'));
-                        
-                        if (btn.cmpData('rclick') && isRightClick(event))
-                            window.location.assign(baseDir + btn.data('rclick'));
-                    }, 300);
-                }
-            },
-
-            'mouseleave' : function(event) {
-                if (!btn.cmpData('disabled'))
-                    btn.src();
-            },
-        });
-    });
 });

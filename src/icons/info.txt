@@ -1,0 +1,32 @@
+* FILE STRUCTURE:
+┗╸ "icons"
+	┃
+	┣━━╸ "<icon name>"
+	┃   ┃
+	┃   ┣━━╸ ".psd"
+	┃   ┃   ┃
+	┃   ┃   ┣━━╸ "regular.psd"
+	┃   ┃   ┃
+	┃   ┃   ┗━━╸ "filled.psd"
+	┃   ┃
+	┃   ┣━━╸ "regular"
+	┃   ┃   ┃
+	┃   ┃   ┣━━╸ "<icon name>-regular-sm.svg"
+	┃   ┃   ┃
+	┃   ┃   ┣━━╸ "<icon name>-regular-nm.svg"
+	┃   ┃   ┃
+	┃   ┃   ┗━━╸ "<icon name>-regular-lg.svg"
+	┃   ┃  
+    ┃   ┗━━╸ "filled"
+	┃       ┃
+	┃       ┣━━╸ "<icon name>-filled-sm.svg"
+	┃       ┃
+	┃       ┣━━╸ "<icon name>-filled-nm.svg"
+	┃       ┃
+	┃       ┗━━╸ "<icon name>-filled-lg.svg"
+   ...
+
+* SIZES:
+	> sm:  50 x 50  px
+	> nm: 100 x 100 px
+	> lg: 200 x 200 px

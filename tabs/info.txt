@@ -9,6 +9,7 @@
 	- format: converts text to morse, hex, etc.         // 
 	- decor: convertes text to unicode styled letters   // 
 	- math: ready to copy math symbols                  // 
+	- markdown: generates an html or raw file           //
 	
 * data
 	- calendar: sync with phone calendar                // 
