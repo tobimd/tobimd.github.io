@@ -29,13 +29,14 @@
 
 
 ICONS LEFT TO DO:
-	carbs
-	insulin
-	decor
-	markdown - (as in "edit/create" markdown and not just "markdown file")
-	future
-	usm
-	linker
-	download
-	drawings
-	* all in games
+	* person - (make the torso's stroke thinner like in "person-stretch")
+	+ carbs
+	+ insulin
+	+ decor
+	+ markdown - (as in "edit/create" markdown and not just "markdown file")
+	+ future
+	+ usm
+	+ linker
+	+ download
+	+ drawings
+	+ games (all within as well)
