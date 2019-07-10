@@ -29,10 +29,7 @@
 
 
 ICONS LEFT TO DO:
-	* person - (make the torso's stroke thinner like in "person-stretch")
-	+ carbs
 	+ insulin
-	+ decor
 	+ markdown - (as in "edit/create" markdown and not just "markdown file")
 	+ future
 	+ usm
@@ -40,3 +37,4 @@ ICONS LEFT TO DO:
 	+ download
 	+ drawings
 	+ games (all within as well)
+	+ make a "-multiple" to all stackable icons
