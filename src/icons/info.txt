@@ -13,7 +13,63 @@
  ┃	    ┃      ┃
 ...    ...    ...
 
-* SIZES:
-	> sm:  50 x 50  px
-	> nm: 100 x 100 px
-	> lg: 200 x 200 px
+* LIST:	
+
+	-  bomb	
+	-  book	
+	-  calendar	
+	-  checkbox_false	
+	-  checkbox_null	
+	-  checkbox_true	
+	-  checklist_empty	
+	-  checklist_full	
+	-  checklist_half	
+	-  controller	
+	-  data_base	
+	-  download	
+	-  eraser	
+	-  file_empty	
+	-  file_gear	
+	-  file_html	
+	-  file_image	
+	-  file_md	
+	-  file_new	
+	-  file_remove	
+	-  file_txt	
+	-  file_write	
+	-  file_written	
+	-  file_wrong	
+	-  flag	
+	-  gmod	
+	-  home	
+	-  image	
+	-  link	
+	-  mario_cap	
+	-  mine	
+	-  minecraft_grass	
+	-  minus	
+	-  multi_player	
+	-  mushroom	
+	-  pencil	
+	-  person	
+	-  person_lift	
+	-  person_streth	
+	-  person_yoga	
+	-  pi_symbol	
+	-  plus	
+	-  recipe_book	
+	-  rubik	
+	-  select	
+	-  single_player	
+	-  snake	
+	-  time	
+	-  timer	
+	-  trashcan	
+	-  triforce	
+	-  unicode	
+	-  university	
+	-  upload	
+	-  user	
+	-  users	
+	-  weight	
+	-  wheat

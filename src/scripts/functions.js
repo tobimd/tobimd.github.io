@@ -10,7 +10,6 @@ String.prototype.format = function (values) {
     return this.replace(/\{(\d+)\}/g, function (m, n) { return args[n]; });
 };
 
-
 /**
  * Returns a random integer between "a" (inclusive) and "b" (not inclusive).
  * @param {Number} a 
@@ -19,10 +18,10 @@ String.prototype.format = function (values) {
  */
 function random(a, b) {
     if (b == undefined && a != undefined)             // if only one argument is given (a and not b), then
-        return Math.floor(Math.random() * a);         // return random [0..a).
+        return Math.floor(Math.random() * a);         //     return random [0..a).
 
     if (b == undefined && a == undefined)             // if no arguments are given, then
-        return Math.floor(Math.random() * 2);         // return random [0..1].
+        return Math.floor(Math.random() * 2);         //     return random [0..1].
 
     return Math.floor(Math.random() * (b - a)) + a;   // return random [a..b).
 }
@@ -75,6 +74,29 @@ $.fn.extend({
     },
 
     /**
+     * Returns an array with arrays if there is a class within that has a separator (not a space character)
+     * @param {...string} [separator] The one or more separators to look for, where even though more than one 
+     * separator is allowed, only one is applied to a certain class if it has 2 or more. If argument is empty 
+     * then "-" (dash) is used. 
+     */
+    deepClassArray : function() {
+        var classes = this.classArray();
+        var separators = (arguments.length > 0) ? Array.prototype.slice.call(arguments) : ["-"];
+
+        for (var i = 0; i < classes.length; i++) {                        // iterate through all of the classes
+            for (var j = 0; j < separators.length; j++){                  // iterate through all of the separators
+
+                if (classes.includes(separators[j])) {                    // if the class has the first found separator, then
+                    var splitClass = classes[i].split(separators[j]);     //     get the class split by that separator and
+                    classes.splice(i, 1, splitClass);                     //     replace the original class with the new array
+
+                    break;                                                // break to avoid problems with the new array
+                }
+            }
+        }
+    },
+
+    /**
      * Replaces the classes or given class with another one. If one argument is given, then 
      * all classes will be replaced with that argument, in the case that there are two 
      * arguments, then the first class will be the one to replace with the second class given.
@@ -98,10 +120,10 @@ $.fn.extend({
             var current = args[1];                             // the new class to be added.
 
             if (old == '')                                     // if the first argument (old class) is '', then
-                return this.insertClass(current);              // append the new class to the end.
+                return this.insertClass(current);              //     append the new class to the end.
 
             if (current == '') {                               // if the second argument (new class) is '', then
-                this.removeClass(old);                         // remove the old class without adding a new one.
+                this.removeClass(old);                         //     remove the old class without adding a new one.
                 if (classes.join(' ') == this.attr('class'))
                     return true;
 
@@ -173,14 +195,14 @@ $.fn.extend({
             var index = (args[0] < 0) ? classes.length + args[0] : args[0]; // parse index if it is negative, ignore otherwise.
 
             if (index < classes.length && index >= 0)                       // if index within normal boundaries, then
-                return classes[index];                                      // return that class.
+                return classes[index];                                      //     return that class.
 
             return undefined;
 
         // two indexes for a sub array from start to end indexes
         } else if (args.length == 2) {
             if (args[0] == args[1])                    // if both indexes are the same, then
-                return this.classAtIndex(args[0]);     // return with one index as start.
+                return this.classAtIndex(args[0]);     //     return with one index as start.
 
             var classes = this.classArray();
 
@@ -188,7 +210,7 @@ $.fn.extend({
             var end = (args[1] < 0) ? classes.length + args[1] : args[1];          //
 
             if (start > end || start > classes.length || end + 1 > classes.length) // if any index is incorrect, then
-                return undefined;                                                  // return undefined.
+                return undefined;                                                  //     return undefined.
             
             var tmp = classes.splice(0);           // copy classes array.
             classes.splice(0, start);              // classes = [0, ..., start]
@@ -227,10 +249,10 @@ $.fn.extend({
         // compare values of that data's attribute
         } else if (args.length == 2) {
             if (this.data(args[0]) == undefined)  // if there is no data attribute initialized (undefined), then
-                return false;                     // return false.
+                return false;                     //     return false.
             
             if (args[1] == '')                    // we know there *is* a data attribute, so if value = '', then
-                return true;                      // return true, because we just want to know that it exists.
+                return true;                      //     return true, because we just want to know that it exists.
 
             return this.data(args[0]) == args[1]; // return the boolean of that comparison.
         }

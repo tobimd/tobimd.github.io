@@ -25,7 +25,7 @@
 	- rubik: oll and pll algorithm lists                // 
 	% gmod: download links and images                   // PC
 	- mario&luigi: easy to see upgrades and status      // 
-	- custom: snake, minesweeper, bomberman, etc.       // PC
+	- custom: snake, minesweeper, bomberman, etc.       // PC (user icon)
 
 
 ICONS LEFT TO DO:
