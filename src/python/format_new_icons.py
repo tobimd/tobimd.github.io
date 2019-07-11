@@ -6,6 +6,10 @@ def main():
     all_icons = []
     curr_icons = []
     missing_icons = []
+    index_file = ""
+    index_icon_list_string = ""
+    html_tags = ['\t\t<a role="button" class="btn btn-light" href="index.html" style="margin-right: 1rem; margin-bottom: 1rem;"><img src="src/icons/{0}/regular.svg"></a>',
+                 '\t\t<a role="button" class="btn btn-light" href="index.html" style="margin-right: 4rem; margin-bottom: 1rem;"><img src="src/icons/{0}/filled.svg"></a>']
 
     ### EDITING THE ICON FOLDER ###
     with open('../icons/icon_list.txt') as icon_list_file:
@@ -21,7 +25,7 @@ def main():
         else:
             missing_icons.append(d)
 
-    print(f'\n\nLooking for the {paint("current icons", "blue")}:')
+    print(f'\n\nLooking for {paint("current icons", "blue")}:')
     for curr in curr_icons:
         if ('-' in curr):
             os.rename(curr, curr[1:])
@@ -35,28 +39,38 @@ def main():
             print(f'\t> The icon "{paint(miss, "green")}" has been removed.')
         else:
             missing_icons[missing_icons.index(miss)] = miss[1:]
-
+    
     print(f'\nLooking for {paint("new icons", "blue")} to create:')
-    for icon in all_icons:
+    for n, icon in enumerate(all_icons):
+        index_icon_list_string +=f'{html_tags[0].format(icon)}\n{html_tags[1].format(icon)}\n\n'
+
+        if (n + 1) % 4 == 0:
+            index_icon_list_string += '\t\t<br>\n\n'
+            
         if (icon not in curr_icons) and (icon not in missing_icons):
             os.mkdir(f'-{icon}')
             cpy_file('base/icon.psd', f'-{icon}/')
             missing_icons.append(icon)
-            print(f'\t> The new icon "{paint(curr[1:], "green")}" has been created.')
+            print(f'\t> The new icon "{paint(icon, "green")}" has been created.')
 
     ### EDITING THE INDEX.HTML ###
-    index_file = ""
-    
+    started = False
     with open('../../index.html') as file:
         index_file = file.read()
+            
 
     print(f'\nUpdating icon counter in {paint("index.html", "blue")}:')
     with open('../../index.html', 'w') as file:
-        regex = r'<!--ICON_COUNT-->icons: \d+ / \d+<!--ICON_COUNT-->'
-        repl = (f'<!--ICON_COUNT-->icons: {len(curr_icons)} / '
+        regex_icon_count = r'<!--ICON_COUNT-->icons: \d+ / \d+<!--ICON_COUNT-->'
+        repl_icon_count = (f'<!--ICON_COUNT-->icons: {len(curr_icons)} / '
                 + f'{len(all_icons)}<!--ICON_COUNT-->')
+
+        regex_icon_list = r'(?<=<!--ICON_LIST-->)[.\s\w<>=\"\-:;/]*(?=<!--ICON_LIST-->)'
         
-        file.write(re.sub(regex, repl, index_file))
+        index_file = re.sub(regex_icon_count, repl_icon_count, index_file)
+        index_file = re.sub(regex_icon_list, index_icon_list_string[:-1], index_file)
+        
+        file.write(index_file)
     
     print('\nDone.')
 

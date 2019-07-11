@@ -17,6 +17,7 @@
 *file_image
 *file_md
 *file_new
+*file_pdf
 *file_remove
 *file_txt
 *file_write
@@ -41,6 +42,9 @@
 *pi_symbol
 *plus
 *recipe_book
+*rounded_checkbox_false
+*rounded_checkbox_null
+*rounded_checkbox_true
 *rubik
 *select
 *single_player
