@@ -10,7 +10,6 @@
 *controller
 *data_base
 *download
-*eraser
 *file_empty
 *file_gear
 *file_html
@@ -37,7 +36,6 @@
 *pencil
 *person
 *person_lift
-*person_stretch
 *person_yoga
 *pi_symbol
 *plus

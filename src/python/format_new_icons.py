@@ -25,22 +25,23 @@ def main():
         else:
             missing_icons.append(d)
 
-    print(f'\n\nLooking for {paint("current icons", "blue")}:')
+    brush('\n\nLooking for ;bcurrent icons;!:')
     for curr in curr_icons:
         if ('-' in curr):
             os.rename(curr, curr[1:])
             curr_icons[curr_icons.index(curr)] = curr[1:]
-            print(f'\t> The icon "{paint(curr[1:], "green")}" has been added.')
+            brush(f'\t> The icon ";g{curr[1:]};!" has been added.')
 
-    print(f'\nLooking for {paint("mising icons", "blue")}:')
+    brush('\nLooking for ;bmissing icons;!:')
     for miss in missing_icons:
         if ('-' not in miss):
             os.rename(miss, '-' + miss)
-            print(f'\t> The icon "{paint(miss, "green")}" has been removed.')
+            brush(f'\t> The icon ";g{miss};!" has been removed.')
+            
         else:
             missing_icons[missing_icons.index(miss)] = miss[1:]
-    
-    print(f'\nLooking for {paint("new icons", "blue")} to create:')
+
+    brush('\nLooking for ;bnew icons;! to create:')
     for n, icon in enumerate(all_icons):
         index_icon_list_string +=f'{html_tags[0].format(icon)}\n{html_tags[1].format(icon)}\n\n'
 
@@ -51,7 +52,7 @@ def main():
             os.mkdir(f'-{icon}')
             cpy_file('base/icon.psd', f'-{icon}/')
             missing_icons.append(icon)
-            print(f'\t> The new icon "{paint(icon, "green")}" has been created.')
+            brush(f'\t> The new icon ";g{icon};!" has been created.')
 
     ### EDITING THE INDEX.HTML ###
     started = False
@@ -59,7 +60,7 @@ def main():
         index_file = file.read()
             
 
-    print(f'\nUpdating icon counter in {paint("index.html", "blue")}:')
+    brush('\nUpdating icon counter in ;bindex.html;!:')
     with open('../../index.html', 'w') as file:
         regex_icon_count = r'<!--ICON_COUNT-->icons: \d+ / \d+<!--ICON_COUNT-->'
         repl_icon_count = (f'<!--ICON_COUNT-->icons: {len(curr_icons)} / '
