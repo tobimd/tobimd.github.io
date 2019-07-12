@@ -26,11 +26,17 @@ def main():
             missing_icons.append(d)
 
     brush('\n\nLooking for ;bcurrent icons;!:')
-    for curr in curr_icons:
+    for n, curr in enumerate(curr_icons):            
         if ('-' in curr):
             os.rename(curr, curr[1:])
-            curr_icons[curr_icons.index(curr)] = curr[1:]
+            curr_icons[n] = curr[1:]
             brush(f'\t> The icon ";g{curr[1:]};!" has been added.')
+
+        index_icon_list_string += f'{html_tags[0].format(curr_icons[n])}\n{html_tags[1].format(curr_icons[n])}\n\n'
+
+        if (n + 1) % 4 == 0:
+            index_icon_list_string += '\t\t<br>\n\n'
+        
 
     brush('\nLooking for ;bmissing icons;!:')
     for miss in missing_icons:
@@ -42,12 +48,7 @@ def main():
             missing_icons[missing_icons.index(miss)] = miss[1:]
 
     brush('\nLooking for ;bnew icons;! to create:')
-    for n, icon in enumerate(all_icons):
-        index_icon_list_string +=f'{html_tags[0].format(icon)}\n{html_tags[1].format(icon)}\n\n'
-
-        if (n + 1) % 4 == 0:
-            index_icon_list_string += '\t\t<br>\n\n'
-            
+    for n, icon in enumerate(all_icons):            
         if (icon not in curr_icons) and (icon not in missing_icons):
             os.mkdir(f'-{icon}')
             cpy_file('base/icon.psd', f'-{icon}/')

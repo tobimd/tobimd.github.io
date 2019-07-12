@@ -27,11 +27,9 @@
 *home
 *image
 *link
-*mario_cap
 *mine
 *minecraft_grass
 *minus
-*multi_player
 *mushroom
 *pencil
 *person
@@ -45,7 +43,6 @@
 *rounded_checkbox_true
 *rubik
 *select
-*single_player
 *snake
 *time
 *timer
