@@ -8,8 +8,8 @@ def main():
     missing_icons = []
     index_file = ""
     index_icon_list_string = ""
-    html_tags = ['\t\t<a role="button" class="btn btn-light" href="index.html" style="margin-right: 1rem; margin-bottom: 1rem;"><img src="src/icons/{0}/regular.svg"></a>',
-                 '\t\t<a role="button" class="btn btn-light" href="index.html" style="margin-right: 4rem; margin-bottom: 1rem;"><img src="src/icons/{0}/filled.svg"></a>']
+    html_tags = ['\t\t<a role="button" class="btn btn-light" style="margin-right: 1rem; margin-bottom: 1rem;"><img src="src/icons/{0}/regular.svg"></a>',
+                 '\t\t<a role="button" class="btn btn-light" style="margin-right: 4rem; margin-bottom: 1rem;"><img src="src/icons/{0}/filled.svg"></a>']
 
     ### EDITING THE ICON FOLDER ###
     with open('../icons/icon_list.txt') as icon_list_file:
