@@ -27,5 +27,12 @@
                                                                                                     
                            
 <?xpacket end="w"?></metadata>
-<rect id="filled" x="125" y="125" width="250" height="250" rx="15" ry="15"/>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <rect id="filled" class="cls-1" x="125" y="125" width="250" height="250" rx="15" ry="15"/>
 </svg>

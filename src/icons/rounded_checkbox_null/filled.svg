@@ -27,5 +27,12 @@
                                                                                                     
                            
 <?xpacket end="w"?></metadata>
-<circle id="filled" cx="250" cy="250" r="125"/>
+<defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <circle id="filled" class="cls-1" cx="250" cy="250" r="125"/>
 </svg>
