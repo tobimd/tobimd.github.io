@@ -1,0 +1,1 @@
+const icons = require('./icons.json')

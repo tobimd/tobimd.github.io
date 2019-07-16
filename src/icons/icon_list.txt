@@ -23,6 +23,7 @@
 *file_written
 *file_wrong
 *flag
+*font
 *gmod
 *home
 *image
@@ -42,8 +43,6 @@
 *rounded_checkbox_null
 *rounded_checkbox_true
 *rubik
-*select
-*snake
 *time
 *timer
 *trashcan
