@@ -1,6 +1,7 @@
-var startDir = 'file:///D:/Documents/Github/' // 'https://';
-var baseDir = startDir + 'tubi-carrillo.github.io/';
-var buttonDir = baseDir + 'src/buttons/';
+const dir = {
+    'base' : 'file:///D:/Documents/Github/tubi-carrillo.github.io/',
+    'icon' : 'file:///D:/Documents/Github/tubi-carrillo.github.io/src/icons/',
+}
 
 /**
  * Replaces parts of the string with "{<number>}" where <number> is the order of the element to be replaced (must be greater or equal than 0) 
@@ -257,4 +258,26 @@ $.fn.extend({
             return this.data(args[0]) == args[1]; // return the boolean of that comparison.
         }
     },
+
+    /**
+     * Works the same as '$.attr('src')', by returning the src attribute
+     * if no argument is given, or by setting the src attribute otherwise.
+     * @param {string} [value] The value to change the src to.
+     * @returns {string | boolean} Returns the current src if no argument is given. 
+     * The boolean is returned if an value is correctly set for the source, true
+     * if it worked, false otherwise.
+     */
+    src : function() {
+        var args = arguments;
+
+        if (args.length == 0) {
+            // return current src
+            return this.attr('src');
+
+        } else if (args.length == 1) {
+            var src = this.src();      // get current src
+            this.attr('src', args[0]); // replace new src
+            return src != this.src();  // evaluate if equal
+        }
+    }
 });
