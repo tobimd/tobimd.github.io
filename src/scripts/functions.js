@@ -1,4 +1,3 @@
-
 const dir = {
     'base' : 'https://tubi-carrillo.github.io/',
     'icon' : 'https://tubi-carrillo.github.io/src/icons/',
