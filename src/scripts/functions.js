@@ -1,7 +1,4 @@
-const dir = {
-    'base' : 'https://tubi-carrillo.github.io/',
-    'icon' : 'https://tubi-carrillo.github.io/src/icons/',
-}
+'use strict';
 
 /**
  * Replaces parts of the string with "{<number>}" where <number> is the order of the element to be replaced (must be greater or equal than 0) 

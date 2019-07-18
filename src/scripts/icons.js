@@ -1,13 +1,5 @@
 'use strict';
 
-const iconSizes = {
-    'mn' : 15,
-    'xs' : 30,
-    'sm' : 50,
-    'md' : 90,
-    'lg' : 170,
-}
-
 window.customElements.define('c-icon', class extends HTMLElement {
     get name() { return this.getAttribute('name'); }   // icon name (e.g. "rubik")
 
