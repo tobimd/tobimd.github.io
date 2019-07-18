@@ -40,8 +40,16 @@
 				vertical-align: middle;
 			}
 
-			a:hover {
+			.link-text:hover {
 				text-decoration: underline;
+			}
+
+			.badge {
+				padding-top: .5rem !important;
+				margin-top: 1.05rem;
+				height: 2rem;
+				width: 2rem;
+				vertical-align: middle;
 			}
 		</style>
 	</head>
@@ -59,7 +67,7 @@
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
 							<div class="d-flex justify-content-center">
-								<c-icon class="d-md-none" name="link" size="mn" style="margin-right: 2rem; margin-top: 1.6rem;"></c-icon> <!-- visible: > md -->
+								<span class="d-md-none badge badge-pill badge-light" style="margin-right: 2rem;"><c-icon class="d-md-none" name="link" size="mn" style="filter: invert(0.8);"></c-icon></span><!-- visible: > md -->
 								<a href="tabs/icon-list.html" class="nav-link">
 									<span class="link-text">icon list</span>
 									<c-icon name="image" type="filled" size="sm"></c-icon>
