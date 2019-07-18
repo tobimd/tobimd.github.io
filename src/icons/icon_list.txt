@@ -28,10 +28,12 @@
 *home
 *image
 *link
+*logo
 *mine
 *minecraft_grass
 *minus
 *mushroom
+*music
 *pencil
 *person
 *person_lift
@@ -45,6 +47,7 @@
 *rubik
 *time
 *timer
+*tmp
 *trashcan
 *triforce
 *unicode

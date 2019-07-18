@@ -15,6 +15,7 @@
 	- calendar: sync with phone calendar                // 
 	- future: notepad/markdown-ish planner              // PC
 	- usm: tests and quizes, or info in general         // 
+	- music: music maker like "musica con un click"     // PC
 	% linker: add links to create a playlist of sorts   // PC
 	% download: links for some roms                     // PC
 	% drawings: showcase of my drawings                 // 

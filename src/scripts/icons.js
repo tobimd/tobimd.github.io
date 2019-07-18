@@ -15,6 +15,8 @@ window.customElements.define('c-icon', class extends HTMLElement {
 
     get size() { return this.getAttribute('size'); }   // icon size (e.g. "md")
 
+    get filters() { return this.getAttribute('filters'); } // icon filters
+
     get style() { return this.getAttribute('style'); } // style
 
     get classes() { return this.getAttribute('class'); } // class
@@ -53,8 +55,12 @@ window.customElements.define('c-icon', class extends HTMLElement {
         this.img.setAttribute('src', '{0}{1}/{2}.svg'.format(dir['icon'], name, type));
 
         // style
-        if (this.has('style'))
-            this.img.setAttribute('style', this.style);
+        if (this.has('style')) {
+            var f = '';
+            if (this.has('filters'))
+                f = ' ' + this.filters + ';';
+            this.img.setAttribute('style', this.style + f);
+        }
     }
 
     constructor () {

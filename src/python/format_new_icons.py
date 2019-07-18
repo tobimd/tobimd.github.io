@@ -7,9 +7,9 @@ def main():
     curr_icons = []
     missing_icons = []
     index_file = ""
-    index_icon_list_string = ""
-    html_tags = ['\t\t<a role="button" class="btn btn-light" style="margin-right: 1rem; margin-bottom: 1rem;"><img src="src/icons/{0}/regular.svg"></a>',
-                 '\t\t<a role="button" class="btn btn-light" style="margin-right: 4rem; margin-bottom: 1rem;"><img src="src/icons/{0}/filled.svg"></a>']
+    index_icon_list_string = "\n"
+    html_tags = ['\t\t<a role="button" class="btn btn-light" href="../index.html" style="margin-right: 1rem; margin-bottom: 1rem;"><img src="../src/icons/{0}/regular.svg"></a>',
+                 '\t\t<a role="button" class="btn btn-light" href="../index.html" style="margin-right: 4rem; margin-bottom: 1rem;"><img src="../src/icons/{0}/filled.svg"></a>']
 
     ### EDITING THE ICON FOLDER ###
     with open('../icons/icon_list.txt') as icon_list_file:
@@ -25,12 +25,12 @@ def main():
         else:
             missing_icons.append(d)
 
-    brush('\n\nLooking for ;bcurrent icons;!:')
+    brush('\n\nLooking for ;c/current icons;!:')
     for n, curr in enumerate(curr_icons):            
         if ('-' in curr):
             os.rename(curr, curr[1:])
             curr_icons[n] = curr[1:]
-            brush(f'\t> The icon ";g{curr[1:]};!" has been added.')
+            brush(f'\t> The icon ";gg{curr[1:]};!" has been added.')
 
         index_icon_list_string += f'{html_tags[0].format(curr_icons[n])}\n{html_tags[1].format(curr_icons[n])}\n\n'
 
@@ -38,34 +38,33 @@ def main():
             index_icon_list_string += '\t\t<br>\n\n'
         
 
-    brush('\nLooking for ;bmissing icons;!:')
+    brush('\nLooking for ;cmissing icons;!:')
     for miss in missing_icons:
         if ('-' not in miss):
             os.rename(miss, '-' + miss)
-            brush(f'\t> The icon ";g{miss};!" has been removed.')
+            brush(f'\t> The icon ";gg{miss};!" has been removed.')
             
         else:
             missing_icons[missing_icons.index(miss)] = miss[1:]
 
-    brush('\nLooking for ;bnew icons;! to create:')
+    brush('\nLooking for ;cnew icons;! to create:')
     for n, icon in enumerate(all_icons):            
         if (icon not in curr_icons) and (icon not in missing_icons):
             os.mkdir(f'-{icon}')
             cpy_file('base/icon.psd', f'-{icon}/')
             missing_icons.append(icon)
-            brush(f'\t> The new icon ";g{icon};!" has been created.')
+            brush(f'\t> The new icon ";gg{icon};!" has been created.')
 
     ### EDITING THE INDEX.HTML ###
     started = False
-    with open('../../index.html') as file:
+    with open('../../tabs/icon-list.html') as file:
         index_file = file.read()
             
 
-    brush('\nUpdating icon counter in ;bindex.html;!:')
-    with open('../../index.html', 'w') as file:
-        regex_icon_count = r'<!--ICON_COUNT-->icons: \d+ / \d+<!--ICON_COUNT-->'
-        repl_icon_count = (f'<!--ICON_COUNT-->icons: {len(curr_icons)} / '
-                + f'{len(all_icons)}<!--ICON_COUNT-->')
+    brush('\nUpdating icon counter in ;cindex.html;!:')
+    with open('../../tabs/icon-list.html', 'w') as file:
+        regex_icon_count = r'<!--N_ICONS-->\d+<!--N_ICONS-->'
+        repl_icon_count = (f'<!--N_ICONS-->{len(all_icons)}<!--N_ICONS-->')
 
         regex_icon_list = r'(?<=<!--ICON_LIST-->)[.\s\w<>=\"\-:;/]*(?=<!--ICON_LIST-->)'
         
