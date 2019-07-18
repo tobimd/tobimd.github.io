@@ -24,11 +24,12 @@
 *file_wrong
 *flag
 *font
+*gear
 *gmod
 *home
 *image
 *link
-*logo
+*menu
 *mine
 *minecraft_grass
 *minus

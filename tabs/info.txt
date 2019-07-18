@@ -28,6 +28,11 @@
 	- mario&luigi: easy to see upgrades and status      // 
 	- custom: snake, minesweeper, bomberman, etc.       // PC (user icon)
 
+* generators
+	- box-shadow: html/css box-shadow generator
+	- (move music here)
+	- color picker
+
 
 ICONS LEFT TO DO:
 	+ insulin
