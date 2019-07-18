@@ -1,6 +1,6 @@
 const dir = {
-    'base' : 'D:/Documents/Github/tubi-carrillo.github.io/',
-    'icon' : 'D:/Documents/Github/tubi-carrillo.github.io/src/icons/',
+    'base' : 'https://tubi-carrillo.github.io/',
+    'icon' : 'https://tubi-carrillo.github.io/src/icons/',
 }
 
 /**
