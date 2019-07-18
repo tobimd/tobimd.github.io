@@ -7,6 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- STYLES -->
+		<link rel="shortcut icon" href="#" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i" rel="stylesheet">
         <link rel="stylesheet" href="src/styles/base.css">
@@ -14,6 +15,7 @@
 		<style>
 			body {
 				font-family: 'Ubuntu Mono', monospace;
+				color: white;
 			}
 
 			.btn-dark {
@@ -27,9 +29,19 @@
 
 			.bg-dark {
 				background-color: #3c3c3c!important;
-    			-webkit-box-shadow: 0px 2px 0px 5px rgba(0,0,0,0.2);
-    			-moz-box-shadow: 0px 2px 0px 5px rgba(0,0,0,0.2);
-    			box-shadow: 0px 2px 0px 5px rgba(0,0,0,0.2);
+    			-webkit-box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.5);
+				-moz-box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.5);
+				box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.5);
+			}
+
+			.link-text {
+				color: white;
+				font-size: 1.5rem;
+				vertical-align: middle;
+			}
+
+			a:hover {
+				text-decoration: underline;
 			}
 		</style>
 	</head>
@@ -46,14 +58,22 @@
 				<div class="collapse navbar-collapse" id="responsiveNavbar">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a href="tabs/icon-list.html" class="nav-link"><c-icon name="link" size="mn" style="margin-right: 2rem;"></c-icon><span>icon list</span><c-icon name="image" type="filled" size="xs"></c-icon></a>
+							<div class="d-flex justify-content-center">
+								<c-icon class="d-md-none" name="link" size="mn" style="margin-right: 2rem; margin-top: 1.6rem;"></c-icon> <!-- visible: > md -->
+								<a href="tabs/icon-list.html" class="nav-link">
+									<span class="link-text">icon list</span>
+									<c-icon name="image" type="filled" size="sm"></c-icon>
+								</a>
+							</div>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-
-		this is a test word
+		
+		<div class="d-flex mx-5 mt-5">
+			<p>This is a test sentence.</p>
+		</div>
 
 		<div style="margin-bottom: 500rem;"></div>
 		<!-- SCRIPTS -->
