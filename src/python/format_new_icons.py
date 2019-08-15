@@ -1,6 +1,6 @@
 import os, re
 from shutil import copy2 as cpy_file
-from colors import *
+from colorparse import paint
 
 def main():
     all_icons = []
@@ -25,12 +25,12 @@ def main():
         else:
             missing_icons.append(d)
 
-    brush('\n\nLooking for ;c/current icons;!:')
+    paint('\n\nLooking for ;C/current icons[;:]:')
     for n, curr in enumerate(curr_icons):            
         if ('-' in curr):
             os.rename(curr, curr[1:])
             curr_icons[n] = curr[1:]
-            brush(f'\t> The icon ";gg{curr[1:]};!" has been added.')
+            paint(f'\t> The icon "[;G]{curr[1:]}[;:]" has been added.')
 
         index_icon_list_string += f'{html_tags[0].format(curr_icons[n])}\n{html_tags[1].format(curr_icons[n])}\n\n'
 
@@ -38,22 +38,22 @@ def main():
             index_icon_list_string += '\t\t<br>\n\n'
         
 
-    brush('\nLooking for ;cmissing icons;!:')
+    paint('\nLooking for ;Cmissing icons[;:]:')
     for miss in missing_icons:
         if ('-' not in miss):
             os.rename(miss, '-' + miss)
-            brush(f'\t> The icon ";gg{miss};!" has been removed.')
+            paint(f'\t> The icon "[;G]{miss}[;:]" has been removed.')
             
         else:
             missing_icons[missing_icons.index(miss)] = miss[1:]
 
-    brush('\nLooking for ;cnew icons;! to create:')
+    paint('\nLooking for ;Cnew icons[;:] to create:')
     for n, icon in enumerate(all_icons):            
         if (icon not in curr_icons) and (icon not in missing_icons):
             os.mkdir(f'-{icon}')
             cpy_file('base/icon.psd', f'-{icon}/')
             missing_icons.append(icon)
-            brush(f'\t> The new icon ";gg{icon};!" has been created.')
+            paint(f'\t> The new icon "[;G]{icon}[;:]" has been created.')
 
     ### EDITING THE INDEX.HTML ###
     started = False
@@ -61,7 +61,7 @@ def main():
         index_file = file.read()
             
 
-    brush('\nUpdating icon counter in ;cindex.html;!:')
+    paint('\nUpdating icon counter in ;Cindex.html[;:]:')
     with open('../../tabs/icon-list.html', 'w') as file:
         regex_icon_count = r'<!--N_ICONS-->\d+<!--N_ICONS-->'
         repl_icon_count = (f'<!--N_ICONS-->{len(all_icons)}<!--N_ICONS-->')

@@ -1,3 +1,15 @@
+*battery_horizontal_charging
+*battery_horizontal_empty
+*battery_horizontal_half
+*battery_horizontal_full
+*battery_horizontal_unknown
+*battery_horizontal_warning
+*battery_vertical_charging
+*battery_vertical_empty
+*battery_vertical_half
+*battery_vertical_full
+*battery_vertical_unknown
+*battery_vertical_warning
 *bomb
 *book
 *calendar
@@ -7,6 +19,8 @@
 *checklist_empty
 *checklist_full
 *checklist_half
+*chip
+*compass
 *controller
 *data_base
 *download
@@ -46,6 +60,7 @@
 *rounded_checkbox_null
 *rounded_checkbox_true
 *rubik
+*tachometer
 *time
 *timer
 *tmp
