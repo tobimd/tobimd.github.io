@@ -10,6 +10,7 @@
 	- decor: convertes text to unicode styled letters   // 
 	- math: ready to copy math symbols                  // 
 	- markdown: generates an html or raw file           //
+	- latex: graphical converter to latex commands (TikZ, tables, etc)
 	
 * data
 	- calendar: sync with phone calendar                // 
