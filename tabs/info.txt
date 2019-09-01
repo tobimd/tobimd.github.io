@@ -33,6 +33,11 @@
 	- box-shadow: html/css box-shadow generator
 	- (move music here)
 	- color picker
+	
+* proof of concept
+	- math art (chaos equations)
+	- marching squares
+	- marching cubes
 
 
 ICONS LEFT TO DO:
