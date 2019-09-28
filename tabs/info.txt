@@ -1,28 +1,27 @@
 * body
-	- recipes: food recipes                                                              
-	- carbs: list with food carbs                                                        
-	% insulin: calculator                                                                
-	- muscle: muscle excercises and stretching                                           
-	- yoga: poses and music                                                              
+	- recipes: food recipes
+	- carbs: list with food carbs
+	- muscle: muscle excercises and stretching
+	- yoga: poses and music
 
 * text
-	- format: converts text to morse, hex, etc.                                          
-	- decor: convertes text to unicode styled letters                                    
-	- math: ready to copy math symbols                                                   
-	- markdown: generates an html or raw file                                           
+	- format: converts text to morse, hex, etc.
+	- decor: convertes text to unicode styled letters
+	- math: ready to copy math symbols
+	- markdown: generates an html or raw file
 	- latex: graphical converter to latex commands (TikZ, tables, etc)
 	
 * data                                                                                                                                  
-	- usm: tests and quizes, or info in general                                                                       
-	- icons: all icons list                                                               
-	- rubik: oll and pll algorithm lists                                                   
-	- download: links for some roms                                                                                                   
-	- zelda: saved recipes (has to be manually updated)                                   
-	- gmod: download links and images                                                                                      
-	- mario&luigi: easy to see upgrades and status 
+	- usm: tests and quizes, or info in general
+	- icons: all icons list
+	- rubik: oll and pll algorithm lists
+	- download: links for some roms
+	- zelda: saved recipes (has to be manually updated)
+	- gmod: download links and images
+	- mario&luigi: easy to see upgrades and status
 
 * games                                        
-	- custom (heavy): 
+	- custom (heavy):
 		snake
 		minesweeper
 		bomberman
@@ -34,7 +33,7 @@
 		sudoku
 
 * generators
-	- music: music maker like "musica con un click" 
+	- music: music maker like "musica con un click"
 	- minecraft: group of command generators   
 	- box-shadow: html/css box-shadow generator
 	- (move music here)
