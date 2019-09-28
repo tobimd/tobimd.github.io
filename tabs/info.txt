@@ -38,6 +38,8 @@
 	- box-shadow: html/css box-shadow generator
 	- (move music here)
 	- color picker
+	- pixelart
+	- voxelart
 	
 * proof of concept
 	- math art (chaos equations)
