@@ -1,35 +1,41 @@
 * body
-	- recipes: food recipes                             // 
-	- carbs: list with food carbs                       // 
-	% insulin: calculator                               // 
-	- muscle: muscle excercises and stretching          // 
-	- yoga: poses and music                             // 
+	- recipes: food recipes                                                              
+	- carbs: list with food carbs                                                        
+	% insulin: calculator                                                                
+	- muscle: muscle excercises and stretching                                           
+	- yoga: poses and music                                                              
 
 * text
-	- format: converts text to morse, hex, etc.         // 
-	- decor: convertes text to unicode styled letters   // 
-	- math: ready to copy math symbols                  // 
-	- markdown: generates an html or raw file           //
+	- format: converts text to morse, hex, etc.                                          
+	- decor: convertes text to unicode styled letters                                    
+	- math: ready to copy math symbols                                                   
+	- markdown: generates an html or raw file                                           
 	- latex: graphical converter to latex commands (TikZ, tables, etc)
 	
-* data
-	- calendar: sync with phone calendar                // 
-	- future: notepad/markdown-ish planner              // PC
-	- usm: tests and quizes, or info in general         // 
-	- music: music maker like "musica con un click"     // PC
-	% linker: add links to create a playlist of sorts   // PC
-	% download: links for some roms                     // PC
-	% drawings: showcase of my drawings                 // 
+* data                                                                                                                                  
+	- usm: tests and quizes, or info in general                                                                       
+	- icons: all icons list                                                               
+	- rubik: oll and pll algorithm lists                                                   
+	- download: links for some roms                                                                                                   
+	- zelda: saved recipes (has to be manually updated)                                   
+	- gmod: download links and images                                                                                      
+	- mario&luigi: easy to see upgrades and status 
 
-* games
-	- minecraft: group of command generators            // 
-	- zelda: saved recipes (has to be manually updated) // 
-	- rubik: oll and pll algorithm lists                // 
-	% gmod: download links and images                   // PC
-	- mario&luigi: easy to see upgrades and status      // 
-	- custom: snake, minesweeper, bomberman, etc.       // PC (user icon)
+* games                                        
+	- custom (heavy): 
+		snake
+		minesweeper
+		bomberman
+		lemmings
+		wolfenstein
+		
+	- custom (light): 
+		pipes
+		sudoku
 
 * generators
+	- music: music maker like "musica con un click" 
+	- minecraft: group of command generators   
 	- box-shadow: html/css box-shadow generator
 	- (move music here)
 	- color picker
@@ -38,15 +44,3 @@
 	- math art (chaos equations)
 	- marching squares
 	- marching cubes
-
-
-ICONS LEFT TO DO:
-	+ insulin
-	+ markdown - (as in "edit/create" markdown and not just "markdown file")
-	+ future
-	+ usm
-	+ linker
-	+ download
-	+ drawings
-	+ games (all within as well)
-	+ make a "-multiple" to all stackable icons
