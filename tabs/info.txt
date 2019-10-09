@@ -27,6 +27,7 @@
 		bomberman
 		lemmings
 		wolfenstein
+                escape game
 
 	- custom (light): 
 		pipes
