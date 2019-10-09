@@ -34,6 +34,8 @@
 		sudoku
                 slide (fill all tiles)
                 picross
+                bloxorz
+
 
 * generators
 	- music: music maker like "musica con un click"
