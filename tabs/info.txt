@@ -27,10 +27,12 @@
 		bomberman
 		lemmings
 		wolfenstein
-		
+
 	- custom (light): 
 		pipes
 		sudoku
+                slide (fill all tiles)
+                picross
 
 * generators
 	- music: music maker like "musica con un click"
