@@ -35,6 +35,7 @@
                 slide (fill all tiles)
                 picross
                 bloxorz
+		q*bert
 
 
 * generators
