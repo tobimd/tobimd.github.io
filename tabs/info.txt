@@ -20,6 +20,7 @@
 	- zelda: saved recipes (has to be manually updated)
 	- gmod: download links and images
 	- mario&luigi: easy to see upgrades and status
+	- minecraft farms
 
 * games                                        
 	- custom (heavy):
