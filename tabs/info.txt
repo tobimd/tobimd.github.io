@@ -10,7 +10,8 @@
 	- math: ready to copy math symbols
 	- markdown: generates an html or raw file
 	- latex: graphical converter to latex commands (TikZ, tables, etc)
-	- to-do manager
+	- to-do manager (like from trello.com)
+	- project aricles (markdown-esk articles about all the projects)
 	
 * data                                                                                                                                  
 	- usm: tests and quizes, or info in general
