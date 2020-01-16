@@ -36,10 +36,11 @@
 	- custom (light): 
 		pipes
 		sudoku
-        slide (fill all tiles)
+		slide (fill all tiles)
 		picross
 		bloxorz
 		q*bert
+		avoid the guards sneaking (random generated maps)
 
 
 * generators
