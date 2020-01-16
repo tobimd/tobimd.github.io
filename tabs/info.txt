@@ -41,7 +41,7 @@
 		bloxorz
 		q*bert
 		avoid the guards sneaking (random generated maps)
-		3d bullet
+		3d bullet (accelerator from newgrounds)
 
 
 * generators
