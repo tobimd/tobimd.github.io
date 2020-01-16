@@ -30,7 +30,7 @@
 		bomberman
 		lemmings
 		wolfenstein
-        escape game
+		escape game
 		grow island
 
 	- custom (light): 
