@@ -1,9 +1,3 @@
-* body
-	- recipes: food recipes
-	- carbs: list with food carbs
-	- muscle: muscle excercises and stretching
-	- yoga: poses and music
-
 * text
 	- format: converts text to morse, hex, etc.
 	- decor: convertes text to unicode styled letters
@@ -22,6 +16,11 @@
 	- gmod: download links and images
 	- mario&luigi: easy to see upgrades and status
 	- minecraft building software (& pre-built maps showcase), basically a voxel engine with minecraft textures
+	- body
+		- recipes: food recipes
+		- carbs: list with food carbs
+		- muscle: muscle excercises and stretching
+		- yoga: poses and music
 
 * games                                        
 	- custom (heavy):
