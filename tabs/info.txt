@@ -30,6 +30,7 @@
 		> avoid guards by sneaking (rng maps)
 		> 3d bullet (accelerator from NewGrounds)
 	> light
+		> sokoban (box pushing puzzle)
 		> snake
 		> minesweeper
 		> pipes
