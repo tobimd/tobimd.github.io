@@ -52,6 +52,8 @@
 	- color picker
 	- pixelart
 	- voxelart
+        - dice art from image
+        - rubik's cube art from image
 	
 * proof of concept
 	- math art (chaos equations)
