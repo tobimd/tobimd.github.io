@@ -1,60 +1,52 @@
-* text
-	- format: converts text to morse, hex, etc.
-	- decor: convertes text to unicode styled letters
-	- math: ready to copy math symbols
-	- markdown: generates an html or raw file
-	- latex: graphical converter to latex commands (TikZ, tables, etc)
-	- to-do manager (like from trello.com)
-	- project aricles (markdown-esk articles about all the projects)
-	
-* data                                                                                                                                  
-	- usm: tests and quizes, or info in general
-	- icons: all icons list
-	- rubik: oll and pll algorithm lists
-	- download: links for some roms
-	- zelda: saved recipes (has to be manually updated)
-	- gmod: download links and images
-	- mario&luigi: easy to see upgrades and status
-	- minecraft building software (& pre-built maps showcase), basically a voxel engine with minecraft textures
-	- body
-		- recipes: food recipes
-		- carbs: list with food carbs
-		- muscle: muscle excercises and stretching
-		- yoga: poses and music
-
-* games                                        
-	- custom (heavy):
-		snake
-		minesweeper
-		bomberman
-		lemmings
-		wolfenstein
-		escape game
-		grow island
-
-	- custom (light): 
-		pipes
-		sudoku
-		slide (fill all tiles)
-		picross
-		bloxorz
-		q*bert
-		avoid the guards sneaking (random generated maps)
-		3d bullet (accelerator from newgrounds)
+> text
+	> format text to different encodings (morse, hex, etc) and styles (unicode styles letters)
+	> math symbols to copy and paste
+	> custom text writer (a mash-up of latex and markdown)
+	> latex tables, TikZ graphs, etc to commands convertion
+	> to-do manager like trello.com
+	> project articles to describe everything in here
 
 
-* generators
-	- music: music maker like "musica con un click"
-	- minecraft: group of command generators   
-	- box-shadow: html/css box-shadow generator
-	- (move music here)
-	- color picker
-	- pixelart
-	- voxelart
-        - dice art from image
-        - rubik's cube art from image
-	
-* proof of concept
-	- math art (chaos equations)
-	- marching squares
-	- marching cubes
+> data
+	> icons gallery
+	> art gallery
+	> rubik's cube oll and pll algorithms
+	> zelda BotW recipe book (put ingredients and recipes show up)
+	> mario & luigi RPG's easy to see upgrades and status
+	> voxel engine with minecraft textures with pre-built stuff
+	> body
+		> recipes
+		> muscle excercises and stretching
+		> yoga poses and music
+
+
+> games
+	> heavy
+		> bomberman
+		> lemmings
+		> wolfenstein
+		> escape game
+		> grow island
+		> avoid guards by sneaking (rng maps)
+		> 3d bullet (accelerator from NewGrounds)
+	> light
+		> snake
+		> minesweeper
+		> pipes
+		> sudoku
+		> sliding blocks puzzle
+		> picross
+		> bloxorz
+		> q*bert
+
+
+> generators
+	> music maker (like one-click music)
+	> one-command minecraft generator
+	> html / css box-shadow generator and more
+	> color picker
+	> pixel art / voxel art
+	> proof of concept
+		> images to dice / rubiks cube art
+		> math art (chaos equations)
+		> marching squares & cubes
