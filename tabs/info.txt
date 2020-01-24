@@ -51,3 +51,4 @@
 		> images to dice / rubiks cube art
 		> math art (chaos equations)
 		> marching squares & cubes
+		> cellular automata & customizable rules
