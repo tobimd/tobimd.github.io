@@ -74,11 +74,21 @@
 				filter: invert(0.8)
 			}
 
+			.icon-info {
+				margin-left: 7.5rem;
+			}
+
 			.menu-text {
 				text-align: center;
 				text-anchor: middle;
-				margin-left: 7.5rem;
+				color: #7c7c7c;
+			}
+
+			.menu-text.hid-square-brakets {
 				color: #333333;
+				display: inline;
+				margin: 0;
+				padding: 0;
 			}
 
 		</style>
@@ -92,10 +102,30 @@
 			<span class="size-text-xl">extra large</span>
 		</p>
 		<ul class="menu-icon-list">
-			<li><img class="menu-icon" src="src/icons/data_base/regular.svg"><span class="menu-text">data</span></li>
-			<li><img class="menu-icon" src="src/icons/file_written/regular.svg"><span class="menu-text">text</span class="menu-text"></li>
-			<li><img class="menu-icon" src="src/icons/file_gear/regular.svg"><span class="menu-text">generators</span class="menu-text"></li>
-			<li><img class="menu-icon" src="src/icons/controller/regular.svg"><span class="menu-text">games</span class="menu-text"></li>
+			<li>
+				<img class="menu-icon" src="src/icons/data_base/regular.svg">
+				<div class="icon-info">
+					<span class="menu-text hid-square-brakets">[</span><span class="menu-text">data</span><span class="menu-text hid-square-brakets">]</span>
+				</div>
+			</li>
+			<li>
+				<img class="menu-icon" src="src/icons/file_written/regular.svg">
+				<div class="icon-info">
+					<span class="menu-text hid-square-brakets">[</span><span class="menu-text">text</span><span class="menu-text hid-square-brakets">]</span>
+				</div>
+			</li>
+			<li>
+				<img class="menu-icon" src="src/icons/file_gear/regular.svg">
+				<div class="icon-info">
+					<span class="menu-text hid-square-brakets">[</span><span class="menu-text">generators</span><span class="menu-text hid-square-brakets">]</span>
+				</div>
+			</li>
+			<li>
+				<img class="menu-icon" src="src/icons/controller/regular.svg">
+				<div class="icon-info">
+					<span class="menu-text hid-square-brakets">[</span><span class="menu-text">games</span><span class="menu-text hid-square-brakets">]</span>
+				</div>
+			</li>
 		</ul>
 
 		<!-- SCRIPTS -->
