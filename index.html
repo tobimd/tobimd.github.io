@@ -15,6 +15,7 @@
 		<style>
 			ul {
 				margin: 0;
+				margin-right: 100%;
 				padding: 0;
 				position: absolute;
 				top: 50%;
@@ -29,10 +30,10 @@
 				width: 100px;
 				height: 100px;
 				text-align: center;
-				line-height: 75px;
+				line-height: 100px;
 				background: #ffffff;
 				border-radius: 50%;
-				font-size: 3rem;
+				font-size: 1.5rem;
 				position: relative;
 				transition: 0.35s cubic-bezier(0.85,0,0.15,1) 0s;
 				z-index: 1;
@@ -70,14 +71,22 @@
 				transform: translate(-50%, -50%);
 				filter: invert(0.8)
 			}
+
+			.menu-text {
+				font-size: 1;
+				text-align: center;
+				text-anchor: middle;
+				margin-left: 7.5rem;
+			}
 		</style>
 	</head>
 	<body class="example">
+		<p>size: <span class="show-size"></span></p>
 		<ul class="menu-icon-list">
-			<li><img class="menu-icon" src="src/icons/data_base/regular.svg"></li>
-			<li><img class="menu-icon" src="src/icons/file_written/regular.svg"></li>
-			<li><img class="menu-icon" src="src/icons/file_gear/regular.svg"></li>
-			<li><img class="menu-icon" src="src/icons/controller/regular.svg"></li>
+			<li><img class="menu-icon" src="src/icons/data_base/regular.svg"><span class="menu-text">data</span></li>
+			<li><img class="menu-icon" src="src/icons/file_written/regular.svg"><span class="menu-text">text</span class="menu-text"></li>
+			<li><img class="menu-icon" src="src/icons/file_gear/regular.svg"><span class="menu-text">generators</span class="menu-text"></li>
+			<li><img class="menu-icon" src="src/icons/controller/regular.svg"><span class="menu-text">games</span class="menu-text"></li>
 		</ul>
 
 		<!-- SCRIPTS -->
