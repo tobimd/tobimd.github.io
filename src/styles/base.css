@@ -9,9 +9,7 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .example { background: rgb(201, 38, 38); }
-    
-    .size-text-xs { display: inline; }
+    .size-text-xs { display: inline; color: rgb(201, 38, 38);}
     .size-text-sm { display: none; }
     .size-text-md { display: none; }
     .size-text-lg { display: none; }
@@ -20,10 +18,8 @@ body {
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .example { background: rgb(41, 145, 194); }
-    
     .size-text-xs { display: none; }
-    .size-text-sm { display: inline; }
+    .size-text-sm { display: inline; color: rgb(41, 145, 194);}
     .size-text-md { display: none; }
     .size-text-lg { display: none; }
     .size-text-xl { display: none; }
@@ -31,11 +27,9 @@ body {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .example { background: rgb(168, 67, 199); }
-    
     .size-text-xs { display: none; }
     .size-text-sm { display: none; }
-    .size-text-md { display: inline; }
+    .size-text-md { display: inline; color: rgb(168, 67, 199);}
     .size-text-lg { display: none; }
     .size-text-xl { display: none; }
     
@@ -43,22 +37,18 @@ body {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .example { background: rgb(61, 187, 50); }
-    
     .size-text-xs { display: none; }
     .size-text-sm { display: none; }
     .size-text-md { display: none; }
-    .size-text-lg { display: inline; }
+    .size-text-lg { display: inline; color: rgb(61, 187, 50);}
     .size-text-xl { display: none; }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .example { background: rgb(204, 135, 55); }
-    
     .size-text-xs { display: none; }
     .size-text-sm { display: none; }
     .size-text-md { display: none; }
     .size-text-lg { display: none; }
-    .size-text-xl { display: inline; }
+    .size-text-xl { display: inline; color: rgb(204, 135, 55);}
 }
