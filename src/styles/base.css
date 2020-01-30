@@ -9,26 +9,26 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .example { background: rgba(253, 70, 70, 0.541); }
+    .example { background: rgb(201, 38, 38); }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .example { background: rgba(253, 70, 198, 0.541); }
+    .example { background: rgb(41, 145, 194); }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .example { background: rgba(119, 70, 253, 0.541); }
+    .example { background: rgb(168, 67, 199); }
     
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .example { background: rgba(70, 232, 253, 0.541); }
+    .example { background: rgb(61, 187, 50); }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .example { background: rgba(70, 253, 152, 0.541); }
+    .example { background: rgb(204, 135, 55); }
 }
