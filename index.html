@@ -13,77 +13,73 @@
         <link rel="stylesheet" href="src/styles/base.css">
 		<link rel="stylesheet" href="src/styles/index.css">
 		<style>
-			body {
-				font-family: 'Ubuntu Mono', monospace;
-				color: white;
+			ul {
+				margin: 0;
+				padding: 0;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
 			}
 
-			.btn-dark {
-				background-color: #00000000;
-				border-color: #ffffff;
+			ul li {
+				list-style: none;
+				float: left;
+				margin: 0.5rem;
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				line-height: 75px;
+				background: #ffffff;
+				border-radius: 50%;
+				font-size: 3rem;
+				position: relative;
+				transition: 0.35s cubic-bezier(0.85,0,0.15,1) 0s;
+				z-index: 1;
 			}
 
-			.btn {
-				border: 3px solid #ffffff;
+			ul li:before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: #333333;
+				border-radius: 50%;
+				transform: scale(0);
+				transition: 0.35s cubic-bezier(0.85,0,0.15,1) 0s;
+				z-index: -1;
 			}
 
-			.bg-dark {
-				background-color: #3c3c3c !important;
-    			-webkit-box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.5);
-				-moz-box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.5);
-				box-shadow: 0px 2px 13px 5px rgba(0,0,0,0.5);
+			ul li:hover:before {
+				transform: scale(0.85);
 			}
 
-			.link-text {
-				color: white;
-				font-size: 1.5rem;
-				vertical-align: middle;
+			ul li:hover img.menu-icon{
+				color: #ffffff;
+				filter: invert(0);
 			}
 
-			.link-text:hover {
-				text-decoration: underline;
-			}
-
-			.badge {
-				padding-top: .5rem !important;
-				margin-top: .65rem;
-				height: 2rem;
-				width: 2rem;
-				vertical-align: middle;
+			img.menu-icon {
+				height: 55%;
+				width: 55%;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				filter: invert(0.8)
 			}
 		</style>
 	</head>
-	<body>
-		<nav class="navbar navbar-expand-md navbar-light bg-dark sticky-top">
-			<div class="container-fluid">
-				<!-- logo -->
-				<a href="#" class="navbar brand"><c-icon name="tmp" size="md"></c-icon></a>
+	<body class="example">
+		<ul class="menu-icon-list">
+			<li><img class="menu-icon" src="src/icons/data_base/regular.svg"></li>
+			<li><img class="menu-icon" src="src/icons/file_written/regular.svg"></li>
+			<li><img class="menu-icon" src="src/icons/file_gear/regular.svg"></li>
+			<li><img class="menu-icon" src="src/icons/controller/regular.svg"></li>
+		</ul>
 
-				<!-- menu -->
-				<button class="navbar-toggler btn btn-dark" style="border-radius: 100%; padding: .5rem; margin: 1rem;" type="button" data-toggle="collapse" data-target="#responsiveNavbar">
-					<c-icon name="menu" size="sm"></c-icon>
-				</button>
-				<div class="collapse navbar-collapse" id="responsiveNavbar">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item">
-							<div class="d-flex justify-content-center">
-								<span class="d-md-none badge badge-pill badge-light" style="margin-right: 2rem;"><c-icon class="d-md-none" name="image" type="filled" size="mn" style="filter: invert(0.8);"></c-icon></span><!-- visible: > md -->
-								<a href="tabs/icon-list.html" class="nav-link">
-									<span class="link-text">icon list</span>
-									<c-icon class="d-none d-md-inline" name="image" type="filled" size="sm"></c-icon>
-								</a>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-		
-		<div class="d-flex mx-5 mt-5">
-			<p>This is a test sentence.</p>
-		</div>
-
-		<div style="margin-bottom: 500rem;"></div>
 		<!-- SCRIPTS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

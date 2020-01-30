@@ -1,12 +1,10 @@
-@font-face {
-    font-family: Pixel;
-    src: url('../fonts/bpdots.squares-bold.otf');
-}
-
 body {
     margin: 0;
     padding: 0;
     background-color: #333333;
+
+    font-family: 'Arial Rounded MT Bold', monospace;
+    color: white;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -22,6 +20,7 @@ body {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .example { background: rgba(119, 70, 253, 0.541); }
+    
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */

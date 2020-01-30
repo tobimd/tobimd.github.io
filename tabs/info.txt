@@ -5,6 +5,7 @@
 	> latex tables, TikZ graphs, etc to commands convertion
 	> to-do manager like trello.com
 	> project articles to describe everything in here
+		> linux articles about fresh install & other apps (polybar, plymouth, etc)
 
 
 > data
