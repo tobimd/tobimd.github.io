@@ -9,7 +9,7 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .size-text-xs { display: inline; color: rgb(201, 38, 38);}
+    .size-text-xs { display: inline; color: rgb(248, 100, 100);}
     .size-text-sm { display: none; }
     .size-text-md { display: none; }
     .size-text-lg { display: none; }
@@ -20,7 +20,7 @@ body {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .size-text-xs { display: none; }
-    .size-text-sm { display: inline; color: rgb(41, 145, 194);}
+    .size-text-sm { display: inline; color: rgb(87, 184, 230);}
     .size-text-md { display: none; }
     .size-text-lg { display: none; }
     .size-text-xl { display: none; }
@@ -31,7 +31,7 @@ body {
 @media only screen and (min-width: 768px) {
     .size-text-xs { display: none; }
     .size-text-sm { display: none; }
-    .size-text-md { display: inline; color: rgb(168, 67, 199);}
+    .size-text-md { display: inline; color: rgb(255, 244, 91);}
     .size-text-lg { display: none; }
     .size-text-xl { display: none; }
     
@@ -42,7 +42,7 @@ body {
     .size-text-xs { display: none; }
     .size-text-sm { display: none; }
     .size-text-md { display: none; }
-    .size-text-lg { display: inline; color: rgb(61, 187, 50);}
+    .size-text-lg { display: inline; color: rgb(150, 219, 133);}
     .size-text-xl { display: none; }
 } 
 
@@ -52,5 +52,5 @@ body {
     .size-text-sm { display: none; }
     .size-text-md { display: none; }
     .size-text-lg { display: none; }
-    .size-text-xl { display: inline; color: rgb(204, 135, 55);}
+    .size-text-xl { display: inline; color: rgb(248, 178, 98);}
 }

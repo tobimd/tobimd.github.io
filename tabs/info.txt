@@ -4,6 +4,7 @@
 	> custom text writer (a mash-up of latex and markdown)
 	> latex tables, TikZ graphs, etc to commands convertion
 	> to-do manager like trello.com
+	> css file for the icons
 	> project articles to describe everything in here
 		> linux articles about fresh install & other apps (polybar, plymouth, etc)
 
