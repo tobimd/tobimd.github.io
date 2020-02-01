@@ -1,3 +1,11 @@
+:root {
+    --bg-color: #333333;
+    --dark-bg-color: #252525;
+    --light-bg-color: #3c3c3c;
+    --fg-color: #ffffff;
+    --dark-fg-color: #d8d8d8;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -9,48 +17,26 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .size-text-xs { display: inline; color: rgb(248, 100, 100);}
-    .size-text-sm { display: none; }
-    .size-text-md { display: none; }
-    .size-text-lg { display: none; }
-    .size-text-xl { display: none; }
-    ul { transform: translate(-130%, -50%); }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    .size-text-xs { display: none; }
-    .size-text-sm { display: inline; color: rgb(87, 184, 230);}
-    .size-text-md { display: none; }
-    .size-text-lg { display: none; }
-    .size-text-xl { display: none; }
-    ul { transform: translate(-100%, -50%); }
+    
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    .size-text-xs { display: none; }
-    .size-text-sm { display: none; }
-    .size-text-md { display: inline; color: rgb(255, 244, 91);}
-    .size-text-lg { display: none; }
-    .size-text-xl { display: none; }
+    
     
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .size-text-xs { display: none; }
-    .size-text-sm { display: none; }
-    .size-text-md { display: none; }
-    .size-text-lg { display: inline; color: rgb(150, 219, 133);}
-    .size-text-xl { display: none; }
+    
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .size-text-xs { display: none; }
-    .size-text-sm { display: none; }
-    .size-text-md { display: none; }
-    .size-text-lg { display: none; }
-    .size-text-xl { display: inline; color: rgb(248, 178, 98);}
+    
 }

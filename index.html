@@ -7,46 +7,243 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<!-- STYLES -->
-		<link rel="shortcut icon" href="#" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i" rel="stylesheet">
-        <link rel="stylesheet" href="src/styles/base.css">
+		<link rel="stylesheet" href="src/styles/base.css">
+		<link rel="stylesheet" href="src/styles/fonts.css">
 		<link rel="stylesheet" href="src/styles/index.css">
+		<style>
+			/* Extra small devices (phones, 600px and down) */
+			@media only screen and (max-width: 600px) {
+				.size-text-xs { 
+					display: inline; 
+					color: rgb(248, 100, 100);
+					position: absolute;
+					
+					top: 10px;
+					left: 10px;
+				}
+				.size-text-sm { display: none; }
+				.size-text-md { display: none; }
+				.size-text-lg { display: none; }
+				.size-text-xl { display: none; }
+
+				body {
+					display: flex;
+					justify-content: center;
+				}
+				.button-group {
+					display: block;
+					margin-top: 5rem;
+					margin-bottom: 10rem;
+				}
+				.menu-button {
+					display: flex;
+					justify-content: left;
+					align-items: center;
+					margin-bottom: 2.5rem;
+				}
+				.btn-icon {
+					margin: 0;
+				}
+				.btn-text { 
+					display: inline;
+					margin-left: 2rem;
+				}
+			}
+
+			/* Small devices (portrait tablets and large phones, 600px and up) */
+			@media only screen and (min-width: 600px) {
+				.size-text-xs { display: none; }
+				.size-text-sm { 
+					display: inline; 
+					color: rgb(87, 184, 230);
+					position: absolute;
+					
+					top: 10px;
+					left: 10px;
+				}
+				.size-text-md { display: none; }
+				.size-text-lg { display: none; }
+				.size-text-xl { display: none; }
+				
+
+				body {
+					display: flex;
+					justify-content: center;
+				}
+				.button-group {
+					display: block;
+					margin-top: 5rem;
+					margin-bottom: 10rem;
+				}
+				.menu-button {
+					display: flex;
+					justify-content: left;
+					align-items: center;
+					margin-bottom: 2.5rem;
+				}
+				.btn-icon {
+					margin: 0;
+				}
+				.btn-text { 
+					display: inline;
+					margin-left: 2rem;
+				}
+			}
+
+			/* Medium devices (landscape tablets, 768px and up) */
+			@media only screen and (min-width: 768px) {
+				.size-text-xs { display: none; }
+				.size-text-sm { display: none; }
+				.size-text-md { 
+					display: inline; 
+					color: rgb(255, 244, 91);
+					position: absolute;
+					
+					top: 10px;
+					left: 10px;
+				}
+				.size-text-lg { display: none; }
+				.size-text-xl { display: none; }
+
+				body {
+					display: flex;
+					justify-content: center;
+				}
+				.button-group {
+					display: block;
+					margin-top: 5rem;
+					margin-bottom: 10rem;
+				}
+				.menu-button {
+					display: flex;
+					justify-content: left;
+					align-items: center;
+					margin-bottom: 2.5rem;
+				}
+				.btn-icon {
+					margin: 0;
+				}
+				.btn-text { 
+					display: inline;
+					margin-left: 2rem;
+				}
+			} 
+
+			/* Large devices (laptops/desktops, 992px and up) */
+			@media only screen and (min-width: 992px) {
+				.size-text-xs { display: none; }
+				.size-text-sm { display: none; }
+				.size-text-md { display: none; }
+				.size-text-lg { 
+					display: inline; 
+					color: rgb(150, 219, 133);
+					position: absolute;
+					
+					top: 10px;
+					left: 10px;
+				}
+				.size-text-xl { display: none; }
+
+				.button-group {
+					display: flex;
+					justify-content: center;
+					margin: 0;
+					margin-top: 15rem;
+				}
+				.menu-button { display: block; }
+				.btn-icon {
+					margin-right: 2rem;
+					margin-left: 2rem;
+				}
+				.btn-text { 
+					display: block;
+					margin-top: 1rem;
+					text-align: center;
+					margin-left: 0;
+				}
+			} 
+
+			/* Extra large devices (large laptops and desktops, 1200px and up) */
+			@media only screen and (min-width: 1200px) {
+				.size-text-xs { display: none; }
+				.size-text-sm { display: none; }
+				.size-text-md { display: none; }
+				.size-text-lg { display: none; }
+				.size-text-xl { 
+					display: inline; 
+					color: rgb(248, 178, 98);
+					position: absolute;
+					
+					top: 10px;
+					left: 10px;
+				}
+			}
+
+			.btn-icon {
+				background-color: var(--fg-color);
+				border-radius: 50%;
+				width: 120px;
+				height: 120px;
+				text-align: center;
+				display: flex;
+				justify-content: center;
+			}
+
+			.btn-icon:hover ~ .btn-text .hidden-sqr-bracket { color: var(--fg-color) !important; }
+			.btn-icon:hover ~ .btn-text { color: var(--fg-color) !important; }
+
+			.btn-icon .tb {
+				margin-top: 0.58rem;
+				padding-left: 0.12rem;
+			}
+
+			.btn-text { 
+				font-size: 1.5rem;
+				color: var(--dark-fg-color);
+			}
+
+			.hidden-sqr-bracket {
+				color: var(--bg-color);
+			}
+		</style>
 	</head>
-	<body class="example">
-		<p style="margin-left: 2rem; margin-top: 1.5rem;"> size: 
+	<body>
+		<p style="margin-left: 2rem; margin-top: 1.5rem;">
 			<span class="size-text-xs">extra small</span>
 			<span class="size-text-sm">small</span>
 			<span class="size-text-md">medium</span>
 			<span class="size-text-lg">large</span>
 			<span class="size-text-xl">extra large</span>
 		</p>
-		<ul class="menu-icon-list">
-			<li>
-				<img class="menu-icon" src="src/icons/data_base/regular.svg">
-				<div class="icon-info">
-					<span class="menu-text hid-square-brakets">[</span><span class="menu-text">data</span><span class="menu-text hid-square-brakets">]</span>
-				</div>
-			</li>
-			<li>
-				<img class="menu-icon" src="src/icons/file_written/regular.svg">
-				<div class="icon-info">
-					<span class="menu-text hid-square-brakets">[</span><span class="menu-text">text</span><span class="menu-text hid-square-brakets">]</span>
-				</div>
-			</li>
-			<li>
-				<img class="menu-icon" src="src/icons/gear/regular.svg">
-				<div class="icon-info">
-					<span class="menu-text hid-square-brakets">[</span><span class="menu-text">generators</span><span class="menu-text hid-square-brakets">]</span>
-				</div>
-			</li>
-			<li>
-				<img class="menu-icon" src="src/icons/controller/regular.svg">
-				<div class="icon-info">
-					<span class="menu-text hid-square-brakets">[</span><span class="menu-text">games</span><span class="menu-text hid-square-brakets">]</span>
-				</div>
-			</li>
-		</ul>
+
+		<div class="button-group">
+			<div class="menu-button">
+				<a class="btn btn-icon" href="text.html">
+					<i class="tb tb-written-file-f tb-4x tb-dark-gray" aria-hidden="true"></i>
+				</a>
+				<div class="btn-text"><span class="hidden-sqr-bracket">[</span> text <span class="hidden-sqr-bracket">]</span></div>
+			</div> 
+			<div class="menu-button">
+				<a class="btn btn-icon" href="generators.html">
+					<i class="tb tb-gear tb-4x tb-dark-gray" aria-hidden="true"></i>
+				</a>
+				<div class="btn-text"><span class="hidden-sqr-bracket">[</span> generators <span class="hidden-sqr-bracket">]</span></div>
+			</div> 
+			<div class="menu-button">
+				<a class="btn btn-icon" href="games.html">
+					<i class="tb tb-controller-f tb-4x tb-dark-gray" aria-hidden="true"></i>
+				</a>
+				<div class="btn-text"><span class="hidden-sqr-bracket">[</span> games <span class="hidden-sqr-bracket">]</span></div>
+			</div> 
+			<div class="menu-button">
+				<a class="btn btn-icon" href="data.html">
+					<i class="tb tb-database-f tb-4x tb-dark-gray" aria-hidden="true"></i>
+				</a>
+				<div class="btn-text"><span class="hidden-sqr-bracket">[</span> data <span class="hidden-sqr-bracket">]</span></div>
+			</div>
+		</div>
 
 		<!-- SCRIPTS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
