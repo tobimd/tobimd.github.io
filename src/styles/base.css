@@ -17,12 +17,12 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-
+    .navbar-text { font-size: 0.8rem; }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
-    
+    .navbar-text { font-size: 1.5rem; }  
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
