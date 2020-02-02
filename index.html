@@ -192,12 +192,26 @@
 				justify-content: center;
 			}
 
+			.btn-icon:hover {
+				background: transparent;
+				transform: scale(0.85);
+				transition: .2s ease-in-out;
+				-webkit-box-shadow: 0px 0px 0px 10px var(--fg-color);
+				-moz-box-shadow: 0px 0px 0px 10px var(--fg-color);
+				box-shadow: 0px 0px 0px 10px var(--fg-color);
+			}
+
 			.btn-icon:hover ~ .btn-text .hidden-sqr-bracket { color: var(--fg-color) !important; }
 			.btn-icon:hover ~ .btn-text { color: var(--fg-color) !important; }
 
 			.btn-icon .tb {
 				margin-top: 0.58rem;
 				padding-left: 0.12rem;
+				z-index: 1;
+			}
+			
+			.btn-icon:hover .tb {
+				color: var(--fg-color);
 			}
 
 			.btn-text { 
