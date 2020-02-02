@@ -7,9 +7,8 @@
     }
     .button-group {
         display: block;
-        margin-top: 5rem;
+        margin-top: 2rem;
         margin-bottom: 3rem;
-        margin-left: -1.5rem;
     }
     .menu-button {
         display: flex;
@@ -49,7 +48,7 @@
     }
     .button-group {
         display: block;
-        margin-top: 5rem;
+        margin-top: 2rem;
         margin-bottom: 3rem;
     }
     .menu-button {
@@ -75,7 +74,7 @@
     }
     .button-group {
         display: block;
-        margin-top: 5rem;
+        margin-top: 2rem;
         margin-bottom: 3rem;
     }
     .menu-button {
