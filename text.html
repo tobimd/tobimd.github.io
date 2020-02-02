@@ -11,40 +11,23 @@
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i" rel="stylesheet">
 		<link rel="stylesheet" href="src/styles/base.css">
 		<link rel="stylesheet" href="src/styles/fonts.css">
-		<link rel="stylesheet" href="src/styles/text.css">
 		<style>
-            .navbar-text { color: #d8d8d8; }
-            .navbar-link-current { color: #ffffff !important; }
-            a.navbar-link { color: #d8d8d8; }
-            a.navbar-link:hover { 
-                color: #ffffff;
-                font-weight: bold; 
-                text-decoration: none;
-            }
-            nav.navbar {
-                -webkit-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
-                -moz-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
-                box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
-            }
 		</style>
 	</head>
-	<body style="margin-bottom: 150rem;">
-        <nav class="navbar fixed-top d-print" style="background-color: #3c3c3c;">
-            <span class="navbar-text">
-                <a class="navbar-link" href="index.html"><i class="tb tb-home-o"></i> home</a> > <span class="navbar-link-current"><i class="tb tb-written-file-o"></i> text</span>
-            </span>
-        </nav>
+	<body>
+		
+		<build-navbar>
+			<navbar-item text="home" icon="home-o" href="index.html"></navbar-item>
+			<navbar-item text="text" icon="written-file-o"></navbar-item>
+		</build-navbar>
+		
+		<div class="content">
+		</div>
 
 		<!-- SCRIPTS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<script src="src/scripts/constants.js"></script>
-		<script src="src/scripts/functions.js"></script>
-		<script src="src/scripts/icons.js"></script>
-        <script>
-			$(document).ready(function() {
-			});
-        </script>
+		<script src="src/scripts/base.js"></script>
 	</body>
 </html>

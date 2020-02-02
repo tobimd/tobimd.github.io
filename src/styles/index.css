@@ -97,8 +97,14 @@
     .button-group {
         display: flex;
         justify-content: center;
+
         margin: 0;
-        margin-top: 15rem;
+        padding: 0;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     .menu-button { display: block; }
     .btn-icon {

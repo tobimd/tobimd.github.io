@@ -11,99 +11,82 @@
 		<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400i,700,700i" rel="stylesheet">
 		<link rel="stylesheet" href="../src/styles/base.css">
 		<link rel="stylesheet" href="../src/styles/fonts.css">
-		<link rel="stylesheet" href="../src/styles/text.css">
 		<style>
-            .navbar-text { color: #d8d8d8; }
-            .navbar-link-current { color: #ffffff !important; }
-            a.navbar-link { color: #d8d8d8; }
-            a.navbar-link:hover { 
-                color: #ffffff;
-                font-weight: bold; 
-                text-decoration: none;
-            }
-            nav.navbar {
-                -webkit-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
-                -moz-box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
-                box-shadow: 0px 0px 11px -2px rgba(0,0,0,0.75);
-            }
 		</style>
 	</head>
 	<body>
-        <nav class="navbar fixed-top d-print" style="background-color: #3c3c3c;">
-            <span class="navbar-text">
-                <a class="navbar-link" href="../index.html"><i class="tb tb-home-o"></i> home</a> > <a class="navbar-link" href="../data.html"><i class="tb tb-database-o"></i> data</a> > <span class="navbar-link-current"><i class="tb tb-book-o"></i> plans</span>
-            </span>
-        </nav>
-
-        <pre style="margin-top:7.5rem; color: var(--fg-color);">
-        > text
-            > format text to different encodings (morse, hex, etc) and styles (unicode styles letters)
-            > math symbols to copy and paste
-            > custom text writer (a mash-up of latex and markdown)
-            > latex tables, TikZ graphs, etc to commands convertion
-            > to-do manager like trello.com
-            > css file for the icons
-            > project articles to describe everything in here
-                > linux articles about fresh install & other apps (polybar, plymouth, etc)
-
-
-        > data
-            > icons gallery
-            > art gallery
-            > rubik's cube oll and pll algorithms
-            > zelda BotW recipe book (put ingredients and recipes show up)
-            > mario & luigi RPG's easy to see upgrades and status
-            > voxel engine with minecraft textures with pre-built stuff
-            > body
-                > recipes
-                > muscle excercises and stretching
-                > yoga poses and music
-
-
-        > games
-            > heavy
-                > bomberman
-                > lemmings
-                > wolfenstein
-                > escape game
-                > grow island
-                > avoid guards by sneaking (rng maps)
-                > 3d bullet (accelerator from NewGrounds)
-            > light
-                > sokoban (box pushing puzzle)
-                > snake
-                > minesweeper
-                > pipes
-                > sudoku
-                > sliding blocks puzzle
-                > picross
-                > bloxorz
-                > q*bert
-
-
-        > generators
-            > music maker (like one-click music)
-            > one-command minecraft generator
-            > html / css box-shadow generator and more
-            > color picker
-            > pixel art / voxel art
-            > proof of concept
-                > images to dice / rubiks cube art
-                > math art (chaos equations)
-                > marching squares & cubes
-                > cellular automata & customizable rules
-        </pre>
+		
+		<build-navbar>
+			<navbar-item text="home" icon="home-o" href="../index.html"></navbar-item>
+            <navbar-item text="data" icon="database-o" href="../data.html"></navbar-item>
+            <navbar-item text="plans" icon="calendar-o"></navbar-item>
+		</build-navbar>
+		
+		<div class="content">
+            <pre style="color: var(--fg-color);">
+                > text
+                    > format text to different encodings (morse, hex, etc) and styles (unicode styles letters)
+                    > math symbols to copy and paste
+                    > custom text writer (a mash-up of latex and markdown)
+                    > latex tables, TikZ graphs, etc to commands convertion
+                    > to-do manager like trello.com
+                    > css file for the icons
+                    > project articles to describe everything in here
+                        > linux articles about fresh install & other apps (polybar, plymouth, etc)
+        
+        
+                > data
+                    > icons gallery
+                    > art gallery
+                    > rubik's cube oll and pll algorithms
+                    > zelda BotW recipe book (put ingredients and recipes show up)
+                    > mario & luigi RPG's easy to see upgrades and status
+                    > voxel engine with minecraft textures with pre-built stuff
+                    > body
+                        > recipes
+                        > muscle excercises and stretching
+                        > yoga poses and music
+        
+        
+                > games
+                    > heavy
+                        > bomberman
+                        > lemmings
+                        > wolfenstein
+                        > escape game
+                        > grow island
+                        > avoid guards by sneaking (rng maps)
+                        > 3d bullet (accelerator from NewGrounds)
+                    > light
+                        > sokoban (box pushing puzzle)
+                        > snake
+                        > minesweeper
+                        > pipes
+                        > sudoku
+                        > sliding blocks puzzle
+                        > picross
+                        > bloxorz
+                        > q*bert
+        
+        
+                > generators
+                    > music maker (like one-click music)
+                    > one-command minecraft generator
+                    > html / css box-shadow generator and more
+                    > color picker
+                    > pixel art / voxel art
+                    > proof of concept
+                        > images to dice / rubiks cube art
+                        > math art (chaos equations)
+                        > marching squares & cubes
+                        > cellular automata & customizable rules
+            </pre>
+		</div>
 
 		<!-- SCRIPTS -->
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-		<script src="../src/scripts/constants.js"></script>
-		<script src="../src/scripts/functions.js"></script>
-		<script src="../src/scripts/icons.js"></script>
-        <script>
-			$(document).ready(function() {
-			});
-        </script>
+		<script src="../src/scripts/base.js"></script>
 	</body>
 </html>
