@@ -17,7 +17,6 @@ body {
 
 .content {
     display: block;
-    margin: 9rem 5rem 9rem 5rem;
     z-index: -1;
 }
 
@@ -39,6 +38,7 @@ nav.navbar {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .navbar-text { font-size: 1rem; }
+    .content { margin: 5rem 1rem 5rem 1rem; }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -53,7 +53,7 @@ nav.navbar {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    
+    .content { margin: 9rem 5rem 9rem 5rem; }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
