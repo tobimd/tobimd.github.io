@@ -35,6 +35,14 @@ nav.navbar {
     z-index: 10;
 }
 
+a { color: var(--fg-color); }
+a:hover {
+    color: var(--fg-color);
+    font-weight: bold;
+    text-decoration: underline;
+}
+a:visited { color: var(--dark-fg-color); }
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .navbar-text { font-size: 1rem; }
@@ -44,19 +52,23 @@ nav.navbar {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .navbar-text { font-size: 1.5rem; }  
+    .content { 
+        margin: 7rem 1rem 7rem 1rem; 
+        font-size: 1.5rem;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    
+    .content { margin: 9rem 12rem 9rem 12rem; }
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .content { margin: 9rem 5rem 9rem 5rem; }
+    .content { margin: 9rem 20rem 9rem 20rem; }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    .content { margin: 9rem 30rem 9rem 30rem; }
 }
