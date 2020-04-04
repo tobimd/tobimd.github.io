@@ -1,7 +1,7 @@
 > text
 	> format text to different encodings (morse, hex, etc) and styles (unicode styles letters)
 	> math symbols to copy and paste
-	> custom text writer (a mash-up of latex and markdown)
+	> custom text writer (a mash-up of latex and markdown "fmd" or formatted markdown)
 	> latex tables, TikZ graphs, etc to commands convertion
 	> to-do manager like trello.com
 	> css file for the icons
