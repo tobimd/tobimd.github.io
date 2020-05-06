@@ -1,7 +1,7 @@
 > text
 	> format text to different encodings (morse, hex, etc) and styles (unicode styles letters)
 	> math symbols to copy and paste
-	> custom text writer (a mash-up of latex and markdown)
+	> custom text writer (a mash-up of latex and markdown "fmd" or formatted markdown)
 	> latex tables, TikZ graphs, etc to commands convertion
 	> to-do manager like trello.com / milanote.com
 	> css file for the icons
@@ -52,6 +52,7 @@
 	> color picker
 	> pixel art / voxel art
 	> latex diagram creator
+	> img / img secuence math creator (like 3blue1brown's manim) for LaTeX + mp4
 	> proof of concept
 		> images to dice / rubiks cube art
 		> math art (chaos equations)
