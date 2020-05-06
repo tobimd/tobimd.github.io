@@ -3,7 +3,7 @@
 	> math symbols to copy and paste
 	> custom text writer (a mash-up of latex and markdown)
 	> latex tables, TikZ graphs, etc to commands convertion
-	> to-do manager like trello.com
+	> to-do manager like trello.com / milanote.com
 	> css file for the icons
 	> project articles to describe everything in here
 		> linux articles about fresh install & other apps (polybar, plymouth, etc)
@@ -20,6 +20,8 @@
 		> recipes
 		> muscle excercises and stretching
 		> yoga poses and music
+	> minecraft mods
+		> ...
 
 
 > games
@@ -49,8 +51,10 @@
 	> html / css box-shadow generator and more
 	> color picker
 	> pixel art / voxel art
+	> latex diagram creator
 	> proof of concept
 		> images to dice / rubiks cube art
 		> math art (chaos equations)
 		> marching squares & cubes
 		> cellular automata & customizable rules
+		> gravitational force
