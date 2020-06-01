@@ -59,3 +59,4 @@
 		> marching squares & cubes
 		> cellular automata & customizable rules
 		> gravitational force
+		> algorithms (https://www.youtube.com/watch?v=E-VqgkRYitk&list=TLPQMDEwNjIwMjDKxhiTEjt7_Q&index=4)
