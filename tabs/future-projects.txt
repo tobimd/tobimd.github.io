@@ -2,3 +2,12 @@
 * minecraft command mod
 * minecraft rollercoaster mod
 * use polybar on notebook
+
+- honor games (in order)
+  - pong v1
+  - pong v2 (try to make it as small as possible in size & as platform-independent as possible, even for terminal use)
+  - casual-fast games pack (solitaire, minesweeper, snake, pong, etc)
+  - 1 game jam
+  - full-fledged bomberman
+  - a mario paper + mario & luigi RPG with the style of the latter one (with high-pixel instead)
+  - a zelda game
