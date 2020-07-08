@@ -43,6 +43,7 @@
 		> picross
 		> bloxorz
 		> q*bert
+		> human benchmark
 
 
 > generators
