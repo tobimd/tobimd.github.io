@@ -1,10 +1,15 @@
 > text
 	> format text to different encodings (morse, hex, etc) and styles (unicode styles letters)
 	> math symbols to copy and paste
+	> rubik's cube oll and pll algorithms
 	> custom text writer (a mash-up of latex and markdown "fmd" or formatted markdown)
 	> latex tables, TikZ graphs, etc to commands convertion
 	> to-do manager like trello.com / milanote.com
 	> css file for the icons
+	> body
+		> recipes
+		> muscle excercises and stretching
+		> yoga poses and music
 	> project articles to describe everything in here
 		> linux articles about fresh install & other apps (polybar, plymouth, etc)
 	> interactible
@@ -14,16 +19,11 @@
 > data
 	> icons gallery
 	> art gallery
-	> rubik's cube oll and pll algorithms
 	> zelda BotW recipe book (put ingredients and recipes show up)
 	> mario & luigi RPG's easy to see upgrades and status
 	> voxel engine with minecraft textures with pre-built stuff
-	> body
-		> recipes
-		> muscle excercises and stretching
-		> yoga poses and music
 	> minecraft mods
-		> ...
+	> static html proyect
 
 
 > games
