@@ -7,6 +7,8 @@
 	> css file for the icons
 	> project articles to describe everything in here
 		> linux articles about fresh install & other apps (polybar, plymouth, etc)
+	> interactible
+		> math puzzles + explanation (prisoner chess puzzle)
 
 
 > data
@@ -60,4 +62,4 @@
 		> marching squares & cubes
 		> cellular automata & customizable rules
 		> gravitational force
-		> algorithms (https://www.youtube.com/watch?v=E-VqgkRYitk&list=TLPQMDEwNjIwMjDKxhiTEjt7_Q&index=4)
+		> algorithms (https://www.youtube.com/watch?v=E-VqgkRYitk&list=TLPQMDEwNjIwMjDKxhiTEjt7_Q&index=4)		
