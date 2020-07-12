@@ -46,6 +46,7 @@
 		> bloxorz
 		> q*bert
 		> human benchmark
+		> reconstruct objects playing with perspective 
 
 
 > generators
