@@ -61,6 +61,6 @@
 		> images to dice / rubiks cube art
 		> math art (chaos equations)
 		> marching squares & cubes
-		> cellular automata & customizable rules
+		> cellular automata & customizable rules (+ wire world)
 		> gravitational force
 		> algorithms (https://www.youtube.com/watch?v=E-VqgkRYitk&list=TLPQMDEwNjIwMjDKxhiTEjt7_Q&index=4)		
