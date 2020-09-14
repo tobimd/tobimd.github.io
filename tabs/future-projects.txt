@@ -10,6 +10,6 @@
   - 1 game jam *?
   - full-fledged bomberman
   - gunpoint stealth game
-  - one mario 64 ("hd") level mock up
   - a mario paper + mario & luigi RPG with the style of the latter one (with high-pixel instead)
+  - one mario 64 ("hd") level mock up
   - a zelda game
