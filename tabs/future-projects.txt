@@ -8,8 +8,8 @@
   - pong v2 (try to make it as small as possible in size & as platform-independent as possible, even for terminal use)
   - casual/fast games pack (solitaire, minesweeper, snake, pong, multiplayer bomberman small version, etc)
   - 1 game jam *?
-  - gunpoint stealth game
   - full-fledged bomberman
+  - gunpoint stealth game
   - one mario 64 ("hd") level mock up
   - a mario paper + mario & luigi RPG with the style of the latter one (with high-pixel instead)
   - a zelda game
