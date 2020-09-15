@@ -13,3 +13,33 @@
   - a mario paper + mario & luigi RPG with the style of the latter one (with high-pixel instead)
   - one mario 64 ("hd") level mock up
   - a zelda game
+
+0) revise applications
+	- backup needed apps & programs
+
+1) update colorparse
+	- allow 256 colors using hex and rgb, without the need
+	of true colors
+	- rename "change_defaults" to "options"
+	- make function that allows adding new colors as codes 
+	& changing others
+	- restructure (colorparse.util, colorparse.codes, etc)
+	- add @deprecated functionality in .util
+	- due to all before, revamp docs
+	- add dark theme for docs
+
+2) figure out music.py inner workings
+	- add argsparse? submodules?
+	
+3) manjaro / arch
+	- test virtualbox with arch
+	- decide which OS to use
+	- test virtualbox with windows 10
+	- move to manjaro / arch + bspwm + alacritty
+
+4) post new OS
+	- install Beef
+
+5) make pygame interface for apps
+	- for music in 2)
+	- for recipe app, then convert to .exe
