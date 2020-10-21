@@ -9,7 +9,7 @@
 	> body
 		> recipes
 		> muscle excercises and stretching
-		> yoga poses and music
+		> yoga poses
 	> project articles to describe everything in here
 		> linux articles about fresh install & other apps (polybar, plymouth, etc)
 	> interactible
@@ -24,6 +24,7 @@
 	> voxel engine with minecraft textures with pre-built stuff
 	> minecraft mods
 	> static html proyect
+	> 100% game visual checklist (save data on cache?)
 
 
 > games
@@ -35,6 +36,7 @@
 		> grow island
 		> avoid guards by sneaking (rng maps)
 		> 3d bullet (accelerator from NewGrounds)
+		> golf it
 	> light
 		> sokoban (box pushing puzzle)
 		> snake
@@ -56,11 +58,12 @@
 	> color picker
 	> pixel art / voxel art
 	> latex diagram creator
-	> img / img secuence math creator (like 3blue1brown's manim) for LaTeX + mp4
+	> img / img sequence math creator (like 3blue1brown's manim) for LaTeX + mp4
 	> proof of concept
 		> images to dice / rubiks cube art
 		> math art (chaos equations)
 		> marching squares & cubes
 		> cellular automata & customizable rules (+ wire world)
 		> gravitational force
-		> algorithms (https://www.youtube.com/watch?v=E-VqgkRYitk&list=TLPQMDEwNjIwMjDKxhiTEjt7_Q&index=4)		
+		> algorithms (https://www.youtube.com/watch?v=E-VqgkRYitk&list=TLPQMDEwNjIwMjDKxhiTEjt7_Q&index=4)
+		> stereogram maker
