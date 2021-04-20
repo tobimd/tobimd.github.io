@@ -2,9 +2,11 @@
 * minecraft command mod
 * minecraft rollercoaster mod
 * minecraft adventure mod (tied to a map that uses that mod)
-* use polybar on notebook
-
-- honor games (in order)
+* web page
+* minecraft let's-play
+* latex documentation
+* 
+* honor games (in order)
 	- pong v1
 	- pong v2 (try to make it as small as possible in size & as platform-independent as possible, even for terminal use)
 	- casual/fast games pack (solitaire, minesweeper, snake, pong, multiplayer bomberman small version, etc)
@@ -33,7 +35,7 @@
 	- add argsparse? submodules?
 	- modularize for easy updating (pytube is not reliable)
 	
-3) manjaro / arch
+3) fedora w/ xmonad
 	- test virtualbox with arch
 	- decide which OS to use
 	- test virtualbox with windows 10
