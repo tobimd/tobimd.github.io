@@ -5,7 +5,7 @@
 * web page
 * minecraft let's-play
 * latex documentation
-* 
+* notif-app (like google calendar) focused on long term notifs and more customization
 * honor games (in order)
 	- pong v1
 	- pong v2 (try to make it as small as possible in size & as platform-independent as possible, even for terminal use)
